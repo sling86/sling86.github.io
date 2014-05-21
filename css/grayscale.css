@@ -206,7 +206,7 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
-.download-section {
+.another-section {
   width: 100%;
   padding: 50px 0;
   color: #ffffff;
@@ -226,7 +226,7 @@ a:focus {
   .content-section {
     padding-top: 250px;
   }
-  .download-section {
+  .another-section {
     padding: 100px 0;
   }
   #map {
