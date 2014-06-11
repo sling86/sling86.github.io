@@ -18,6 +18,13 @@ $(function () {
     });
 });
 
+//Carousel Options
+
+$('.carousel').carousel({
+    interval: 5000
+})
+
+
 //Google Map Skin - Get more at http://snazzymaps.com/
 var myOptions = {
     zoom: 15,
