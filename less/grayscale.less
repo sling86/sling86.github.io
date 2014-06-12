@@ -14,11 +14,11 @@
 html {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 @font-face {
     font-family: 'Trajan Pro Regular';
-    src: url('TrajanPro-Regular.eot');
-    src: local('Trajan Pro Regular'), local('Trajan Pro'), url('TrajanPro-Regular.ttf') format('truetype'), url('TrajanPro-Regular.svg#font') format('svg'), url('TrajanPro-Regular.woff') format('woff');
+    src: url('TrajanPro-Regular.eot'), local('Trajan Pro Regular'), local('Trajan Pro'), url('TrajanPro-Regular.ttf')format('truetype'), url('TrajanPro-Regular.svg#font')format('svg'), url('TrajanPro-Regular.woff') format('woff');
 }
 body {
     width: 100%;
@@ -52,6 +52,21 @@ background-color: @dark;
     -moz-transition: 0.8s ease-in-out left;
     -o-transition: 0.8s ease-in-out left;
     transition: 0.8s ease-in-out left;
+}
+.faded-overlay {
+    background: rgba(199, 199, 199, 0.5);
+    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 9px;
+    border-radius: 5px;
+}
+.slide-1 {
+    background-image: url('../img/lava-candles.jpg');
+}
+.slide-2 {
+    background-image: url('../img/factory-shop-web.jpg');
+}
+.slide-3 {
+    background-image: url('../img/design-image.jpg');
 }
 /* keep full widget on smaller screens */
 
@@ -282,8 +297,25 @@ background: rgba(255, 255, 255, 0.1);
     .content-section {
         padding-top: 100px;
     }
+    .about {
+        background: url(../img/frosted-cherry-line-4.jpg) no-repeat center center scroll;
+        width: 100%;
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    .about {
+        width: 100%;
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
     section#factoryshop {
-        width:100%;
+        width: 100%;
         color: @light;
 
 background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
