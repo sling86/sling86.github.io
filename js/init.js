@@ -143,8 +143,22 @@
 							on:			function(t) { t.removeClass('inactive'); },
 							off:		function(t) { t.addClass('inactive'); }
 						});
+                    
+                $('img.slogan')
+						.scrollwatch({
+							delay:		50,
+							range:		0.5,
+							anchor:		'center',
+							on:			function(t) { t.removeClass('inactive'); },
+							off:		function(t) { t.addClass('inactive'); }
+						});
 			
-				// Work.
+				
+                
+                
+                
+                
+                // Work.
 					$('#work')
 						.scrollwatch({
 							delay:		25,
