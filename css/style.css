@@ -904,21 +904,35 @@ body.touch .poptrox-popup .closer {
 .oxygen {
     font-family: 'Oxygen', sans-serif;
 }
+
+.logo {
+   text-shadow: 1px 1px 1px #000; 
+}
 .yel {
     color: #ffc000;
 }
 .lighttext-shadow {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 .text-bg {
     background-color: rgba(0, 0, 0, 0.5);
 }
-img.slogan {
-    width: 80%;
-    margin-top: 4em;
-    padding: 0;
+
+#slogan {
     transition: all 0.2s ease-in-out;
 }
-img.slogan .inactive {
+
+#slogan img {
+    clear: both;
+    width: 100%;
+    margin-top: 2em;
+    transition: all 0.2s ease-in-out;
+}
+#slogan img .inactive {
     opacity: 0;
 }
