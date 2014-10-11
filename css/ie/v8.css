@@ -79,7 +79,7 @@
 
 	#one {
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
-		background: url('../../images/one.jpg');
+		background: url('../../images/flashed.jpg');
 		background-size: cover;
 	}
 
@@ -99,7 +99,7 @@
 
 	#two {
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
-		background: url('../../images/two.jpg');
+		background: url('../../images/diffusers.jpg');
 		background-size: cover;
 	}
 
