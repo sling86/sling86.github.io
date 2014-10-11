@@ -614,7 +614,7 @@ body {
 /*********************************************************************************/
 
 #one {
-    background: url('images/overlay.png'), url('../images/one.jpg');
+    background: url('images/overlay.png'), url('../images/flashed.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -626,7 +626,7 @@ body {
 /*********************************************************************************/
 
 #two {
-    background: url('images/overlay.png'), url('../images/two.jpg');
+    background: url('images/overlay.png'), url('../images/diffusers.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -935,4 +935,11 @@ body.touch .poptrox-popup .closer {
 }
 #slogan img .inactive {
     opacity: 0;
+}
+
+.smaller-font {
+    font-size: 0.8em;
+}
+.smaller-heading {
+    font-size: 1.5em;
 }
