@@ -943,3 +943,7 @@ body.touch .poptrox-popup .closer {
 .smaller-heading {
     font-size: 1.5em;
 }
+
+.subhead {
+    height: 3em;
+}
