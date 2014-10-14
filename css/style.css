@@ -930,12 +930,13 @@ body.touch .poptrox-popup .closer {
 #slogan img {
     clear: both;
     width: 100%;
-    margin-top: 2em;
+    margin-top: 8%;
     transition: all 0.2s ease-in-out;
 }
 #slogan img .inactive {
     opacity: 0;
 }
+
 
 .smaller-font {
     font-size: 0.8em;
@@ -946,4 +947,29 @@ body.touch .poptrox-popup .closer {
 
 .subhead {
     height: 3em;
+}
+a[type="email"] {
+    color: #ffc000;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button {
+    background-color: #ffc000;
+    
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.button:hover {
+    background-color: #d8ff00;
+}
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+.button:active {
+    background-color: #ffc000;
+}
+.pcontain {
+    overflow-y: scroll;
 }
