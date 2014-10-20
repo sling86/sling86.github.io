@@ -904,29 +904,22 @@ body.touch .poptrox-popup .closer {
 .oxygen {
     font-family: 'Oxygen', sans-serif;
 }
-
 .logo {
-   text-shadow: 1px 1px 1px #000; 
+    text-shadow: 1px 1px 1px #000;
 }
 .yel {
     color: #ffc000;
 }
 .lighttext-shadow {
-  color: white;
-  text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .text-bg {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
 #slogan {
     transition: all 0.2s ease-in-out;
 }
-
 #slogan img {
     clear: both;
     width: 100%;
@@ -936,15 +929,12 @@ body.touch .poptrox-popup .closer {
 #slogan img .inactive {
     opacity: 0;
 }
-
-
 .smaller-font {
     font-size: 0.8em;
 }
 .smaller-heading {
     font-size: 1.5em;
 }
-
 .subhead {
     height: 3em;
 }
@@ -956,13 +946,12 @@ input[type="submit"],
 input[type="reset"],
 .button {
     background-color: #ffc000;
-    
 }
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 .button:hover {
-    background-color: #d8ff00;
+    background-color: #fff500;
 }
 input[type="button"]:active,
 input[type="submit"]:active,
