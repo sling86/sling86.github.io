@@ -7,6 +7,7 @@ function showGoogleMaps() {
 
     var mapOptions = {
         zoom: 16, // initialize zoom level - the max value is 21
+        scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: true,
         mapTypeControlOptions: {
