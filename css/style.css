@@ -633,11 +633,11 @@ body {
 }
 /*********************************************************************************/
 
-/* Work                                                                          */
+/* Gallery                                                                          */
 
 /*********************************************************************************/
 
-#work {} #work .row.images {} #work .row.images .image {
+#gallery {} #gallery .row.images {} #gallery .row.images .image {
     position: relative;
     top: 0;
     left: 0;
@@ -653,19 +653,19 @@ body {
     -ms-transform: translateZ(0);
     transform: translateZ(0);
 }
-#work .row.images.inactive {} #work .row.images.inactive .image {
+#gallery .row.images.inactive {} #gallery .row.images.inactive .image {
     opacity: 0;
 }
-#work .row.images.inactive .image.from-left {
+#gallery .row.images.inactive .image.from-left {
     left: -14em;
 }
-#work .row.images.inactive .image.from-right {
+#gallery .row.images.inactive .image.from-right {
     left: 14em;
 }
-#work .row.images.inactive .image.from-top {
+#gallery .row.images.inactive .image.from-top {
     top: -7em;
 }
-#work .row.images.inactive .image.from-bottom {
+#gallery .row.images.inactive .image.from-bottom {
     top: 7em;
 }
 /*********************************************************************************/
@@ -961,4 +961,8 @@ input[type="reset"]:active,
 }
 .pcontain {
     overflow-y: scroll;
+}
+.bolunder {
+    text-decoration: underline;
+    font-weight: bold;
 }
