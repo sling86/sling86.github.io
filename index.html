@@ -18,6 +18,7 @@
     <script src="js/jquery.scrollgress.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="js/map.js"></script>
     <noscript>
         <link rel="stylesheet" href="css/skel.css" />
@@ -243,10 +244,11 @@
 
     <!-- Directions -->
     <section id="directions" class="main style2 right dark fullscreen">
+        <div id="googlemaps"></div>
         <div class="content box style2">
             <header>
                 <img src="images/directions.svg" class="subhead" alt="Directions" />
-                <h2 style="display: none">Opening Times</h2>
+                <h2 style="display: none">Directions</h2>
             </header>
             <h4>Approaching from the North</h4>
             <p class="oxygen smaller-font">Take the A286 from Haslemere towards Midhurst. As you enter the centre of Fernhurst take a right turn at the crossroads adjacent to Fernhurst Post Office. Follow this road (Vann Road) for 1.3 miles, and you will find us on the left. Visitor parking is located within our central courtyard.</p>

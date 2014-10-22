@@ -1,5 +1,5 @@
 // The latitude and longitude of your business / place
-var position = [27.1959739, 78.02423269999997];
+var position = [51.05167582784824, -0.7497944056656252];
 
 function showGoogleMaps() {
 
@@ -25,13 +25,4 @@ function showGoogleMaps() {
     });
 }
 
-function loadScript() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-        'callback=initialize';
-    document.body.appendChild(script);
-}
-
-window.onload = loadScript;
 google.maps.event.addDomListener(window, 'load', showGoogleMaps);

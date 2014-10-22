@@ -752,10 +752,10 @@ body {
 /*********************************************************************************/
 
 #directions {
-    background: url('images/overlay.png'), url('../images/shelf.jpg');
+    /*background: url('images/overlay.png'), url('../images/shelf.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background-position: top left, center center;*/
 }
 /*********************************************************************************/
 
