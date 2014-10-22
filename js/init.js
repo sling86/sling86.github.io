@@ -75,6 +75,7 @@
         var $window = $(window),
             $body = $('body'),
             $header = $('#header'),
+            $logo = $('#logo'),
             $all = $body.add($header),
             sectionTransitionState = false;
 
@@ -267,6 +268,8 @@
         // Section transitions.
 
         if (settings.sectionTransitions) {
+            
+           
 
             // Generic sections.
             $('.main.style1')
@@ -274,11 +277,16 @@
                     delay: 50,
                     range: 0.5,
                     anchor: 'center',
+                    init: function (){
+                        $logo.addClass('inactive');
+                    },
                     on: function (t) {
                         t.removeClass('inactive');
+                        $logo.addClass('inactive');
                     },
                     off: function (t) {
                         t.addClass('inactive');
+                        $logo.removeClass('inactive');
                     }
                 });
 

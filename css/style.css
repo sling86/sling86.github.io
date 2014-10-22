@@ -77,7 +77,7 @@ i {
     font-style: italic;
 }
 a {
-    color: #98c593;
+    color: #ffc000;
     -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -503,7 +503,7 @@ input[type="reset"].style2:hover,
     color: #fff;
 }
 .dark a {
-    color: #fff;
+    color: #ffc000;
 }
 .dark .button.style2 {
     border-color: inherit;
@@ -566,6 +566,20 @@ body {
     height: 3em;
     line-height: 3em;
     letter-spacing: -1px;
+    opacity: 1.0;
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+#logo.inactive {
+    opacity: 0;
 }
 #logo a {
     font-size: 1.25em;
