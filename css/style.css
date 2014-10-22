@@ -747,6 +747,18 @@ body {
 }
 /*********************************************************************************/
 
+/* Directions                                                                           */
+
+/*********************************************************************************/
+
+#directions {
+    background: url('images/overlay.png'), url('../images/shelf.jpg');
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, center center;
+}
+/*********************************************************************************/
+
 /* Footer                                                                        */
 
 /*********************************************************************************/
@@ -1015,4 +1027,13 @@ input[type="reset"]:active,
 .bolunder {
     text-decoration: underline;
     font-weight: bold;
+}
+#googlemaps {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /* Set z-index to 0 as it will be on a layer below the contact form */
 }
