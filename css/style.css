@@ -415,7 +415,7 @@ input[type="reset"].style2:hover,
 /* Box */
 
 .box {
-    background: #fff;
+    background-color: rgba(255,255,255,0.74);
     color: #39454b;
     padding: 2em;
 }
