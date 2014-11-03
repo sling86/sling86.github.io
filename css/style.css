@@ -1043,3 +1043,33 @@ input[type="reset"]:active,
     z-index: 0;
     /* Set z-index to 0 as it will be on a layer below the contact form */
 }
+
+#directions-panel {
+    overflow: auto;
+}
+
+#googlemaps {
+    margin-right: 400px;
+}
+
+#control {
+    background: #fff;
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    display: none;
+}
+
+@media print {
+    #googlemaps {
+        height: 500px;
+        margin: 0;
+    }
+
+    #directions-panel {
+        float: none;
+        width: auto;
+    }
+}

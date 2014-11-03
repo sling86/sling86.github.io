@@ -1,10 +1,16 @@
 // The latitude and longitude of your business / place
 var position = [51.05167582784824, -0.7497944056656252];
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var latLng = new google.maps.LatLng(position[0], position[1]);
+var geocoder;
 
 function showGoogleMaps() {
 
-    var latLng = new google.maps.LatLng(position[0], position[1]);
+    
     var latLngOffset = new google.maps.LatLng(position[0], position[1] + 0.005);
+    geocoder = new google.maps.Geocoder();
+    directionsDisplay = new google.maps.DirectionsRenderer();
     
     var mapOptions = {
         zoom: 16, // initialize zoom level - the max value is 21
@@ -98,13 +104,51 @@ function showGoogleMaps() {
 
     map = new google.maps.Map(document.getElementById('googlemaps'),
         mapOptions);
-
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions-panel'));
     // Show the default red marker at the location
     marker = new google.maps.Marker({
         position: latLng,
         map: map,
         draggable: false,
         animation: google.maps.Animation.DROP
+    });
+    codeAddress("BN16 3PJ");
+//    calcRoute()
+}
+
+function codeAddress(start) {
+    var address = start;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            
+//            map.setCenter(results[0].geometry.location);
+//            var marker = new google.maps.Marker({
+//                map: map,
+//                position: results[0].geometry.location
+//            });
+            
+            calcRoute(results[0].geometry.location, latLng);
+            
+            
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
+function calcRoute(start, end) {
+//    var start = "BN16 3PJ";
+//    var end = latLng;
+    var request = {
+        origin:start,
+        destination:end,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
     });
 }
 
