@@ -4,7 +4,8 @@ var position = [51.05167582784824, -0.7497944056656252];
 function showGoogleMaps() {
 
     var latLng = new google.maps.LatLng(position[0], position[1]);
-
+    var latLngOffset = new google.maps.LatLng(position[0], position[1] + 0.005);
+    
     var mapOptions = {
         zoom: 16, // initialize zoom level - the max value is 21
         scrollwheel: false,
@@ -13,7 +14,7 @@ function showGoogleMaps() {
         mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
         },
-        center: latLng,
+        center: latLngOffset,
         styles: [{
             "featureType": "road",
             "elementType": "labels",
