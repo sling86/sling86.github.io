@@ -52,7 +52,7 @@ input[type="reset"],
 
 #intro {
     -ms-behavior: url('css/ie/backgroundsize.min.htc');
-    background: url('../../images/factory-front.jpg');
+    background: url('../../images/bg/intro-bg.jpg');
     background-size: cover;
 }
 #intro:before {
@@ -72,7 +72,7 @@ input[type="reset"],
 
 #one {
     -ms-behavior: url('css/ie/backgroundsize.min.htc');
-    background: url('../../images/flashed.jpg');
+    background: url('../../images/bg/bob-bg.jpg');
     background-size: cover;
 }
 #one:before {
@@ -92,7 +92,7 @@ input[type="reset"],
 
 #two {
     -ms-behavior: url('css/ie/backgroundsize.min.htc');
-    background: url('../../images/lidon.jpg');
+    background: url('../../images/bg/dod-bg.jpg');
     background-size: cover;
 }
 #two:before {
@@ -112,7 +112,7 @@ input[type="reset"],
 
 #three {
     -ms-behavior: url('css/ie/backgroundsize.min.htc');
-    background: url('../../images/stack.jpg');
+    background: url('../../images/bg/pap-bg.jpg');
     background-size: cover;
 }
 #three:before {
@@ -132,7 +132,7 @@ input[type="reset"],
 
 #factshop {
     -ms-behavior: url('css/ie/backgroundsize.min.htc');
-    background: url('../../images/shopfront.jpg');
+    background: url('../../images/bg/fs-bg.jpg');
     background-size: cover;
 }
 #factshop:before {
@@ -152,7 +152,7 @@ input[type="reset"],
 
 #opentime {
     -ms-behavior: url('css/ie/backgroundsize.min.htc');
-    background: url('../../images/shelf.jpg');
+    background: url('../../images/bg/ot-bg.jpg');
     background-size: cover;
 }
 #opentime:before {
@@ -163,4 +163,4 @@ input[type="reset"],
     position: absolute;
     left: 0;
     top: 0;
-}
+}bg../../images/bg/../../images/bg/intro-bg.jpg

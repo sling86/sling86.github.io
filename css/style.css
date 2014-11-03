@@ -77,7 +77,7 @@ i {
     font-style: italic;
 }
 a {
-    color: #ffc000;
+    color: #39454b;
     -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -415,7 +415,7 @@ input[type="reset"].style2:hover,
 /* Box */
 
 .box {
-    background-color: rgba(255,255,255,0.74);
+    background-color: rgba(255, 255, 255, 0.74);
     color: #39454b;
     padding: 2em;
 }
@@ -503,7 +503,8 @@ input[type="reset"].style2:hover,
     color: #fff;
 }
 .dark a {
-    color: #ffc000;
+    color: #39454b;
+    font-weight: bolder;
 }
 .dark .button.style2 {
     border-color: inherit;
@@ -615,7 +616,7 @@ body {
 /*********************************************************************************/
 
 #intro {
-    background: url(''), url('../images/factory-front.jpg');
+    background: url(''), url('../images/bg/intro-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, bottom center;
@@ -628,7 +629,8 @@ body {
 /*********************************************************************************/
 
 #one {
-    background: url('images/overlay.png'), url('../images/flashed.jpg');
+    /* background: url('images/overlay.png'), url('../images/bg/bob-bg.jpg'); */
+    background: url(''), url('../images/bg/bob-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -640,7 +642,8 @@ body {
 /*********************************************************************************/
 
 #two {
-    background: url('images/overlay.png'), url('../images/lidon.jpg');
+    /*    background: url('images/overlay.png'), url('../images/bg/dod-bg.jpg');*/
+    background: url(''), url('../images/bg/dod-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -652,7 +655,8 @@ body {
 /*********************************************************************************/
 
 #three {
-    background: url('images/overlay.png'), url('../images/stack.jpg');
+    /*    background: url('images/overlay.png'), url('../images/bg/pap-bg.jpg');*/
+    background: url(''), url('../images/bg/pap-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -664,7 +668,8 @@ body {
 /*********************************************************************************/
 
 #factshop {
-    background: url('images/overlay.png'), url('../images/shopfront.jpg');
+    /*    background: url('images/overlay.png'), url('../images/bg/fs-bg.jpg');*/
+    background: url(''), url('../images/bg/fs-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -676,7 +681,8 @@ body {
 /*********************************************************************************/
 
 #opentime {
-    background: url('images/overlay.png'), url('../images/shelf.jpg');
+    /*    background: url('images/overlay.png'), url('../images/bg/ot-bg.jpg');*/
+    background: url(''), url('../images/bg/ot-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
