@@ -1043,6 +1043,14 @@ input[type="reset"]:active,
     z-index: 0;
     /* Set z-index to 0 as it will be on a layer below the contact form */
 }
+#directions-input input[type="text"] {
+    height: 1.4em;
+    line-height: 1.4em;
+}
+#directions-input input[type="submit"] {
+    height: 1.4em;
+    line-height: 1.4em;
+}
 #directions-panel {
     overflow: auto;
 }

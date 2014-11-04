@@ -17,6 +17,7 @@
     <script src="js/jquery.poptrox.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/init.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
@@ -62,14 +63,14 @@
             </header>
             <p class="oxygen lighttext-shadow">Specialists in bespoke premium candles since 1997, offering a full design &amp; technical service. Producers of candles and diffusers for renowned luxury brands, designers and boutique stores.</p>
             <footer>
-                <a href="#one" class="button style2 down">More</a>
+                <!--                <a href="#one" class="button style2 down">More</a>-->
                 <div id="slogan">
                     <img src="images/slogantext.svg" class="sloganhead" alt="Bespoke luxury candles &amp; diffusers hand poured in England." />
                 </div>
             </footer>
 
         </div>
-
+        <a href="#one" class="button style2 down anchored">More</a>
     </section>
 
     <!-- One -->
@@ -328,10 +329,6 @@
 
     <!-- Directions -->
     <section id="directions" class="main style2 right dark fullscreen">
-        <div id="control">
-            <strong>Start:</strong>
-        </div>
-
         <div id="googlemaps"></div>
 
         <div class="content box style2">
@@ -339,6 +336,11 @@
                 <img src="images/directions.svg" class="subhead" alt="Directions" />
                 <h2 style="display: none">Directions</h2>
             </header>
+            <form id="directions-input" method="get" action="">
+                Enter your postcode:
+                <input type="text" name="postcode" class="postcode" placeholder="P057 C0D3" />
+                <input type="submit" value="Go" />
+            </form>
             <div id="directions-panel">
                 <h4>Approaching from the North</h4>
                 <p class="oxygen smaller-font">Take the A286 from Haslemere towards Midhurst. As you enter the centre of Fernhurst take a right turn at the crossroads adjacent to Fernhurst Post Office. Follow this road (Vann Road) for 1.3 miles, and you will find us on the left. Visitor parking is located within our central courtyard.</p>

@@ -125,6 +125,12 @@
                     return false;
                 });
 
+            //            $form.find('#directions-input input[type=submit]')
+            //                .on('click', function () {
+            //                    $(this).parents('form').submit();
+            //                    return false;
+            //                });
+
             if (skel.vars.IEVersion < 10) {
                 $.fn.n33_formerize = function () {
                     var _fakes = new Array(),
@@ -268,8 +274,8 @@
         // Section transitions.
 
         if (settings.sectionTransitions) {
-            
-           
+
+
 
             // Generic sections.
             $('.main.style1')
@@ -277,7 +283,7 @@
                     delay: 50,
                     range: 0.5,
                     anchor: 'center',
-                    init: function (){
+                    init: function () {
                         $logo.addClass('inactive');
                     },
                     on: function (t) {
@@ -436,11 +442,22 @@
 
                         var $t = $(this),
                             $c = $t.children('.content'),
-                            x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
+                            x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1),
+                            xPwr10 = Math.round(x / 10),
+                            xPT = Math.round(xPwr10 * 2),
+                            xPB = Math.round(x - xPwr10);
 
-                        $t
-                            .css('padding-top', x)
-                            .css('padding-bottom', x);
+
+                        if ($t.attr('id') == 'intro') {
+                            $t
+                                .css('padding-top', xPT)
+                                .css('padding-bottom', xPB);
+                            $t.find('p.oxygen').css('margin-top', x)
+                        } else {
+                            $t
+                                .css('padding-top', x)
+                                .css('padding-bottom', x);
+                        }
 
                     });
                 } else
@@ -467,6 +484,40 @@
                 .trigger('scroll');
 
         });
+
+        var $dirForm = $("#directions-input");
+
+        jQuery.validator.addMethod(
+            "postcode",
+            function (value, element) {
+                var regPostcode = "/^([g][i][r][0][a][a])$|^((([a-pr-uwyz]{1}([0]|[1-9]\d?))|([a-pr-uwyz]{1}[a-hk-y]{1}([0]|[1-9]\d?))|([a-pr-uwyz]{1}[1-9][a-hjkps-uw]{1})|([a-pr-uwyz]{1}[a-hk-y]{1}[1-9][a-z]{1}))(\d[abd-hjlnp-uw-z]{2})?)$/i";
+                var re = new RegExp(regPostcode);
+                return this.optional(element) || re.test(value);
+            }, "Please correct the postcode"
+        );
+
+        $dirForm.validate({
+            debug: true,
+            submitHandler: function (form) {
+                // do other things for a valid form
+                var postCode = $dirForm.find('input[name=postcode]').val();
+
+                alert("Handler for .submit() called. Postcode: " + postCode);
+                codeAddress(postCode);
+                event.preventDefault();
+                //form.submit();
+            }
+        });
+
+        //        $dirForm.submit(function (event) {
+        //            var postCode = $dirForm.find('input[name=postcode]').val();
+        //
+        //            alert("Handler for .submit() called. Postcode: " + postCode);
+        //            codeAddress(postCode);
+        //            event.preventDefault();
+        //
+        //        });
+
 
     });
 
