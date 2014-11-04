@@ -159,7 +159,7 @@ article:last-child {
     top: 0;
     width: 100%;
     height: 100%;
-/*    background: url('images/overlay.png');*/
+    /*    background: url('images/overlay.png');*/
 }
 .image img {
     display: block;
@@ -1043,15 +1043,12 @@ input[type="reset"]:active,
     z-index: 0;
     /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-
 #directions-panel {
     overflow: auto;
 }
-
 #googlemaps {
     margin-right: 400px;
 }
-
 #control {
     background: #fff;
     padding: 5px;
@@ -1061,13 +1058,31 @@ input[type="reset"]:active,
     box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
     display: none;
 }
-
+#content {
+    color: #39454b;
+    line-height: 1.3em;
+    font-size: 1.24em;
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+}
+#content h1 {
+    font-size: 1.15em;
+    margin-bottom: 0.1em;
+}
+#content p {
+    margin-bottom: 0;
+    line-height: initial;
+}
+#content p a {
+    text-decoration: none;
+}
+;
 @media print {
     #googlemaps {
         height: 500px;
         margin: 0;
     }
-
     #directions-panel {
         float: none;
         width: auto;

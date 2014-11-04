@@ -7,11 +7,11 @@ var geocoder;
 
 function showGoogleMaps() {
 
-    
+
     var latLngOffset = new google.maps.LatLng(position[0], position[1] + 0.005);
     geocoder = new google.maps.Geocoder();
     directionsDisplay = new google.maps.DirectionsRenderer();
-    
+
     var mapOptions = {
         zoom: 16, // initialize zoom level - the max value is 21
         scrollwheel: false,
@@ -106,31 +106,64 @@ function showGoogleMaps() {
         mapOptions);
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+    var contentString = '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading cinzel">Contract <span class="yel">Candles</span> Ltd</h1>' +
+        '<p>Lower Lodge, Vann Road,</p>' +
+        '<p>Fernhurst,</p>' +
+        '<p>Haslemere,</p>' +
+        '<p>Surrey,</p>' +
+        '<p>GU27 3NH</p>' +
+        '<p><a href="callto:+441428 645433">01428 645433</a></p>' +
+        '</div>';
+
+    //    var contentString = '<div id="content">' +
+    //        '<div id="siteNotice">' +
+    //        '</div>' +
+    //        '<p class="oxygen smaller-font">Contract Candles Ltd' +
+    //        '<br>Lower Lodge, Vann Road, Fernhurst,' +
+    //        '<br>Haslemere, Surrey, GU27 3NH' +
+    //        '<br>01428 645433' +
+    //        '</p>' +
+    //        '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
     // Show the default red marker at the location
     marker = new google.maps.Marker({
         position: latLng,
         map: map,
         draggable: false,
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP,
+        title: 'Contract Candles Ltd'
     });
-    codeAddress("BN16 3PJ");
-//    calcRoute()
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
+
+    //codeAddress("BN16 3PJ");
+    //    calcRoute()
 }
 
 function codeAddress(start) {
     var address = start;
-    geocoder.geocode( { 'address': address}, function(results, status) {
+    geocoder.geocode({
+        'address': address
+    }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            
-//            map.setCenter(results[0].geometry.location);
-//            var marker = new google.maps.Marker({
-//                map: map,
-//                position: results[0].geometry.location
-//            });
-            
+
+            //            map.setCenter(results[0].geometry.location);
+            //            var marker = new google.maps.Marker({
+            //                map: map,
+            //                position: results[0].geometry.location
+            //            });
+
             calcRoute(results[0].geometry.location, latLng);
-            
-            
+
+
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -138,14 +171,14 @@ function codeAddress(start) {
 }
 
 function calcRoute(start, end) {
-//    var start = "BN16 3PJ";
-//    var end = latLng;
+    //    var start = "BN16 3PJ";
+    //    var end = latLng;
     var request = {
-        origin:start,
-        destination:end,
+        origin: start,
+        destination: end,
         travelMode: google.maps.TravelMode.DRIVING
     };
-    directionsService.route(request, function(response, status) {
+    directionsService.route(request, function (response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
         }
