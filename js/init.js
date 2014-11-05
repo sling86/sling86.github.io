@@ -442,22 +442,40 @@
 
                         var $t = $(this),
                             $c = $t.children('.content'),
-                            x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1),
-                            xPwr10 = Math.round(x / 10),
-                            xPT = Math.round(xPwr10 * 2),
-                            xPB = Math.round(x - xPwr10);
+                            x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
+                        //x = Highest returned number from this rounded up calc: (Window.height - .content.Height - #header.height) / 2 + 1;
+                        //x = (957 - 448 - 68) = 441 / 2 = 220.5 + 1
+                        //x = 441 / 2 = 220.5
+                        //x = 220.5 + 1 = 221.5
+                        //x = Round(221.5) = 222
+                        //x = 222
+
 
 
                         if ($t.attr('id') == 'intro') {
+                            //
+                            //                            var xPwr10 = Math.round(x / 10),
+                            //                                xPT = xPwr10 * 2,
+                            //                                xPB = x - xPwr10;
+                            //
+                            //                            $t
+                            //                                .css('padding-top', xPT)
+                            //                                .css('padding-bottom', xPB);
+                            //                            $t.find('p.oxygen').css('margin-top', x)
+                            //
+                            //$t.find('div.content').css('margin-top', -x)
                             $t
-                                .css('padding-top', xPT)
-                                .css('padding-bottom', xPB);
-                            $t.find('p.oxygen').css('margin-top', x)
+                                .css('padding-top', '')
+                                .css('padding-bottom', '');
+                            var introHeight = Math.max(100, Math.round($window.height() - $header.outerHeight()));
+                            $t.find('div.content').css('height', introHeight); //450 when / 2
+
                         } else {
                             $t
                                 .css('padding-top', x)
                                 .css('padding-bottom', x);
                         }
+
 
                     });
                 } else

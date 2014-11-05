@@ -581,6 +581,11 @@ body {
 }
 #logo.inactive {
     opacity: 0;
+    cursor: default;
+}
+#logo.inactive a {
+    opacity: 0;
+    cursor: default;
 }
 #logo a {
     font-size: 1.25em;
@@ -621,6 +626,13 @@ body {
     background-attachment: fixed, fixed;
     background-position: top left, bottom center;
     background-repeat: repeat, no-repeat;
+    text-align: center;
+    margin-bottom: 0;
+}
+#intro footer {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 4em;
 }
 /*********************************************************************************/
 
@@ -758,7 +770,7 @@ body {
 /*********************************************************************************/
 
 #directions {
-    background: url('images/overlay.png'), url('../images/shelf.jpg');
+    background: url(''), url('../images/bg/ot-bg.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -974,13 +986,15 @@ body.touch .poptrox-popup .closer {
 }
 .logo {
     text-shadow: 1px 1px 1px #000;
+    font-size: 4em;
+    padding-top: .1em;
 }
 .yel {
     color: #ffc000;
 }
 .lighttext-shadow {
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: #575757;
+    /*    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
 }
 .text-bg {
     background-color: rgba(0, 0, 0, 0.5);
