@@ -1053,6 +1053,7 @@ input[type="reset"]:active,
 }
 #directions-panel {
     overflow: auto;
+    height: 300px;
 }
 #googlemaps {
     margin-right: 400px;

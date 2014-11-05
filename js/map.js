@@ -143,7 +143,7 @@ function showGoogleMaps() {
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
     });
-
+    infowindow.open(map, marker);
     //codeAddress("BN16 3PJ");
     //    calcRoute()
 }
@@ -160,6 +160,7 @@ function codeAddress(start) {
             //                map: map,
             //                position: results[0].geometry.location
             //            });
+            $('#directions-panel').html('');
 
             calcRoute(results[0].geometry.location, latLng);
 
@@ -180,9 +181,48 @@ function calcRoute(start, end) {
     };
     directionsService.route(request, function (response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
+
             directionsDisplay.setDirections(response);
         }
     });
 }
 
 google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+
+$(document).ready(function () {
+
+    // Your code here.
+    var $dirForm = $("#directions-input");
+
+    //    jQuery.validator.addMethod(
+    //        "postcode",
+    //        function (value, element) {
+    //            var regPostcode = "/^([g][i][r][0][a][a])$|^((([a-pr-uwyz]{1}([0]|[1-9]\d?))|([a-pr-uwyz]{1}[a-hk-y]{1}([0]|[1-9]\d?))|([a-pr-uwyz]{1}[1-9][a-hjkps-uw]{1})|([a-pr-uwyz]{1}[a-hk-y]{1}[1-9][a-z]{1}))(\d[abd-hjlnp-uw-z]{2})?)$/i";
+    //            var re = new RegExp(regPostcode);
+    //            return this.optional(element) || re.test(value);
+    //        }, "Please correct the postcode"
+    //    );
+
+    //    $dirForm.validate({
+    //        debug: true,
+    //        submitHandler: function (form) {
+    //            // do other things for a valid form
+    //            var postCode = $dirForm.find('input[name=postcode]').val();
+    //
+    //            alert("Handler for .submit() called. Postcode: " + postCode);
+    //            codeAddress(postCode);
+    //            event.preventDefault();
+    //            //form.submit();
+    //        }
+    //    });
+
+    $dirForm.submit(function (event) {
+        var userAddr = $dirForm.find('input[name=address]').val();
+
+        alert("Handler for .submit() called. userAddr: " + userAddr);
+        codeAddress(userAddr);
+        event.preventDefault();
+
+    });
+
+});
