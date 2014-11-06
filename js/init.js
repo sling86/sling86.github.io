@@ -276,27 +276,8 @@
         if (settings.sectionTransitions) {
 
 
-
-            // Generic sections.
-            $('.main.style1')
-                .scrollwatch({
-                    delay: 50,
-                    range: 0.5,
-                    anchor: 'center',
-                    init: function () {
-                        $logo.addClass('inactive');
-                    },
-                    on: function (t) {
-                        t.removeClass('inactive');
-                        $logo.addClass('inactive');
-                    },
-                    off: function (t) {
-                        t.addClass('inactive');
-                        $logo.removeClass('inactive');
-                    }
-                });
-
-            $('.main.style2')
+            // Intro.
+            $('#intro')
                 .scrollwatch({
                     delay: 50,
                     range: 0.5,
@@ -306,6 +287,46 @@
                     },
                     on: function (t) {
                         t.removeClass('inactive');
+                        $logo.addClass('inactive');
+
+                    },
+                    off: function (t) {
+                        t.addClass('inactive');
+                        $logo.removeClass('inactive');
+                    }
+                });
+
+            // Generic sections.
+            //            $('.main.style1')
+            //                .scrollwatch({
+            //                    delay: 50,
+            //                    range: 0.5,
+            //                    anchor: 'center',
+            //                    init: function (t) {
+            //                        t.addClass('inactive');
+            //                    },
+            //                    on: function (t) {
+            //                        t.removeClass('inactive');
+            //                        $logo.addClass('inactive');
+            //                    },
+            //                    off: function (t) {
+            //                        t.addClass('inactive');
+            //                        $logo.removeClass('inactive');
+            //                    }
+            //                });
+
+            $('.main.style2')
+                .scrollwatch({
+                    delay: 50,
+                    range: 0.5,
+                    anchor: 'center',
+                    init: function (t) {
+                        t.addClass('inactive');
+
+                    },
+                    on: function (t) {
+                        t.removeClass('inactive');
+                        $logo.removeClass('inactive');
                     },
                     off: function (t) {
                         t.addClass('inactive');
@@ -333,6 +354,7 @@
                                 row.removeClass('inactive');
                             }, 100 * (length - n++));
                         });
+                        $logo.removeClass('inactive');
                     },
                     off: function (t) {
                         var rows = t.find('.row.images'),
@@ -356,9 +378,11 @@
                     anchor: 'center',
                     init: function (t) {
                         t.addClass('inactive');
+                        $logo.removeClass('inactive');
                     },
                     on: function (t) {
                         t.removeClass('inactive');
+                        $logo.removeClass('inactive');
                     },
                     off: function (t) {
                         t.addClass('inactive');
@@ -383,6 +407,10 @@
 
                 if (skel.isActive('mobile')) {
 
+                    // Intro.
+                    $('#intro')
+                        .scrollwatchSuspend();
+
                     // Generic sections.
                     $('.main.style1')
                         .scrollwatchSuspend();
@@ -400,6 +428,9 @@
 
                 } else {
 
+                    // Intro.
+                    $('#intro')
+                        .scrollwatchResume();
                     // Generic sections.
                     $('.main.style1')
                         .scrollwatchResume();
@@ -450,20 +481,7 @@
                         //x = Round(221.5) = 222
                         //x = 222
 
-
-
                         if ($t.attr('id') == 'intro') {
-                            //
-                            //                            var xPwr10 = Math.round(x / 10),
-                            //                                xPT = xPwr10 * 2,
-                            //                                xPB = x - xPwr10;
-                            //
-                            //                            $t
-                            //                                .css('padding-top', xPT)
-                            //                                .css('padding-bottom', xPB);
-                            //                            $t.find('p.oxygen').css('margin-top', x)
-                            //
-                            //$t.find('div.content').css('margin-top', -x)
                             $t
                                 .css('padding-top', '')
                                 .css('padding-bottom', '');

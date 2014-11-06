@@ -629,11 +629,6 @@ body {
     text-align: center;
     margin-bottom: 0;
 }
-#intro footer {
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 4em;
-}
 /*********************************************************************************/
 
 /* One                                                                           */
@@ -993,22 +988,37 @@ body.touch .poptrox-popup .closer {
     color: #ffc000;
 }
 .lighttext-shadow {
-    color: #575757;
+    color: #525252;
     /*    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
 }
 .text-bg {
     background-color: rgba(0, 0, 0, 0.5);
 }
-#slogan {
-    transition: all 0.2s ease-in-out;
+#intro header {
+    width: 80%;
+    margin: 0 auto;
 }
-#slogan img {
-    clear: both;
+#intro footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-top: 8%;
+    /*    padding-bottom:4em;*/
+}
+.slogan {
+    width: 65%;
+    margin: auto 0;
     transition: all 0.2s ease-in-out;
 }
-#slogan img .inactive {
+.inactive .slogan {
+    opacity: 0;
+}
+#intro div header,
+#intro div footer {
+    transition: all 0.2s ease-in-out;
+    opacity: 1.0;
+}
+#intro.inactive div header,
+#intro.inactive div footer {
     opacity: 0;
 }
 .smaller-font {
@@ -1110,4 +1120,21 @@ input[type="reset"]:active,
         float: none;
         width: auto;
     }
+}
+a.fullwidth {
+    width: 100%;
+    display: block;
+    margin: 0;
+    height: 4em;
+    line-height: 4em;
+    background: url('images/dark-arrow.svg'), url('images/down-bg-3.png');
+    background-position: center center, top left;
+    background-repeat: no-repeat, repeat-x;
+    background-size: 3%, auto;
+    text-indent: -100000px;
+    transition: all 0.2s ease-in-out;
+}
+a:hover.fullwidth {
+    background-position: center center, 0 100%;
+    background-size: 3.3%, auto;
 }
