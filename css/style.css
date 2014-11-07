@@ -995,8 +995,7 @@ body.touch .poptrox-popup .closer {
     background-color: rgba(0, 0, 0, 0.5);
 }
 #intro header {
-    width: 80%;
-    margin: 0 auto;
+
 }
 #intro footer {
     position: absolute;
@@ -1127,14 +1126,21 @@ a.fullwidth {
     margin: 0;
     height: 4em;
     line-height: 4em;
-    background: url('images/dark-arrow.svg'), url('images/down-bg-3.png');
-    background-position: center center, top left;
+    background: url('images/dark-arrow-simp.svg'), url('images/down-bg.png');
+
+    background-position: center 60%, 50%;
     background-repeat: no-repeat, repeat-x;
     background-size: 3%, auto;
     text-indent: -100000px;
     transition: all 0.2s ease-in-out;
 }
 a:hover.fullwidth {
-    background-position: center center, 0 100%;
+    background-position: center center, 0 70%;
     background-size: 3.3%, auto;
+}
+.bar {
+    padding: 0 5%;
+    margin: 0;
+    background: rgba(0,0,0,0.2);
+    color: #fff;
 }
