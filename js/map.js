@@ -105,7 +105,7 @@ function showGoogleMaps() {
     map = new google.maps.Map(document.getElementById('googlemaps'),
         mapOptions);
     directionsDisplay.setMap(map);
-    directionsDisplay.setPanel(document.getElementById('directions-panel'));
+    directionsDisplay.setPanel(document.getElementById('directions-wording'));
 
     var contentString = '<div id="location-panel">' +
 //        '<div id="siteNotice">' +
@@ -160,7 +160,7 @@ function codeAddress(start) {
             //                map: map,
             //                position: results[0].geometry.location
             //            });
-            $('#directions-panel').html('');
+            $('#directions-wording').html('');
 
             calcRoute(results[0].geometry.location, latLng);
 

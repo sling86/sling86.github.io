@@ -488,6 +488,11 @@
                             var introHeight = Math.max(100, Math.round($window.height() - $header.outerHeight()));
                             $t.find('div.content').css('height', introHeight); //450 when / 2
 
+                        } else if ($t.attr('id') == 'directions') {
+                            $t
+                            .css('padding-top', x)
+                            .css('padding-bottom', x);
+
                         } else {
                             $t
                                 .css('padding-top', x)

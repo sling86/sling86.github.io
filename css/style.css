@@ -1126,7 +1126,9 @@ input[type="reset"]:active,
     line-height: 2em;
     margin-top: 0.5em;
 }
-
+#direction .box {
+    padding: 1em;
+}
 #directions > div.content.box.style2 > header {
     margin-bottom: 0;
 }
