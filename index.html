@@ -66,8 +66,9 @@
             <footer>
                 <img src="images/slogantext.svg" class="slogan" alt="Bespoke luxury candles and diffusers hand poured in England." />
                 <!-- <a href="#one" class="button style2 down anchored">More</a>-->
-                <a href="#one" class="fullwidth">More</a>
+
             </footer>
+            <a href="#one" class="fullwidth">More</a>
         </div>
     </section>
 
@@ -81,7 +82,8 @@
             <p class="oxygen smaller-font">Our factory is located in the beautiful South Downs National Park on the Surrey/West Sussex border. We produce all our candles on site where they are hand poured to the highest quality standards. We work with some of the biggest luxury brands in the world so quality is second nature to us.</p>
             <p class="oxygen smaller-font">We are certified against ISO 9001:2008 for the provision of design, development, manufacture and packaging services of candles and reed diffuser products, to meet own label and client specifications.</p>
         </div>
-        <a href="#two" class="button style2 down anchored">Next</a>
+<!--        <a href="#two" class="button style2 down anchored">Next</a>-->
+        <a href="#two" class="fullwidth">Next</a>
     </section>
 
     <!-- Design and Development -->
@@ -94,7 +96,8 @@
             <p class="oxygen smaller-font">At Contract Candles we have an experienced design team which allows us to offer a fully bespoke packaging and glass service. The team will manage your project from start to finish taking the stress out of sourcing, sampling and finalising products.</p>
             <p class="oxygen smaller-font">Creating the perfect candle takes some considerable time and expertise. Our development team have just that expertise to ensure your candle burns beautifully, smells perfect and enhances any room. We carry out accredited in house testing on all our candles and diffusers, giving you that extra peace of mind.</p>
         </div>
-        <a href="#three" class="button style2 down anchored">Next</a>
+<!--        <a href="#three" class="button style2 down anchored">Next</a>-->
+        <a href="#three" class="fullwidth">Next</a>
     </section>
 
     <!-- Production and Packaging -->
@@ -107,7 +110,8 @@
             <p class="oxygen smaller-font">Our production team run a well organised, efficient, filling process for all our candles and diffusers. Every stage is checked thoroughly and monitored carefully. We offer complete traceability and batch testing to ensure every product that leaves our factory is of the highest standard.</p>
             <p class="oxygen smaller-font">The packaging team are highly skilled, with most products being hand finished. Every product is finished to your specific requirements. Quality control is key in this area and where we feel we stand apart from our competitors.</p>
         </div>
-        <a href="#gallery" class="button style2 down anchored">Next</a>
+<!--        <a href="#gallery" class="button style2 down anchored">Next</a>-->
+        <a href="#gallery" class="fullwidth">Next</a>
     </section>
 
     <!-- Gallery -->
@@ -256,7 +260,8 @@
             <p class="oxygen smaller-font">Complementing this, are a variety of candle and home accessories. Perfect for a spot of retail therapy and an ideal place to look for gifts for all occasions.</p>
             <p class="oxygen smaller-font">In addition to our Fernhurst factory shop, we have a store in Horsham which also has the same bargains.</p>
         </div>
-        <a href="#opentime" class="button style2 down anchored">Next</a>
+<!--        <a href="#opentime" class="button style2 down anchored">Next</a>-->
+        <a href="#opentime" class="fullwidth">Next</a>
     </section>
 
     <!-- Opening Times -->
@@ -268,15 +273,28 @@
             </header>
             <h4 class="bolunder">Factory Shop</h4>
             <p class="oxygen smaller-font">Lower Lodge, Vann Road, Fernhurst, GU27 3NH, 01428 645 433</p>
-            <p class="oxygen smaller-font">Monday - Friday 9.00am – 5.30pm
-                <br/>Saturdays and Sundays 9.00am – 5.00pm</p>
+            <table class="smaller-font">
+                <tr>
+                    <td>Monday - Friday</td><td>9.00am – 5.30pm</td>
+                </tr>
+                <tr>
+                    <td>Saturdays and Sundays</td><td>9.00am – 5.00pm</td>
+                </tr>
+            </table>
             <h4 class="bolunder">Horsham Shop</h4>
             <p class="oxygen smaller-font">22 Piries Place, Horsham, RH12 1EH, 01403 750 585</p>
-            <p class="oxygen smaller-font">Monday - Friday 9.00am – 5.30pm
-                <br/>Saturdays and Sundays 9.00am – 5.00pm
-            </p>
+            <table class="smaller-font">
+                <tr>
+                    <td>Monday - Friday</td><td>9.00am – 5.30pm</td>
+                </tr>
+                <tr>
+                    <td>Saturdays and Sundays</td><td>9.00am – 5.00pm</td>
+                </tr>
+            </table>
+
         </div>
-        <a href="#contact" class="button style2 down anchored">Next</a>
+<!--        <a href="#contact" class="button style2 down anchored">Next</a>-->
+        <a href="#contact" class="fullwidth">Next</a>
     </section>
 
     <!-- Contact -->
@@ -334,12 +352,13 @@
                 <img src="images/directions.svg" class="subhead" alt="Directions" />
                 <h2 style="display: none">Directions</h2>
             </header>
-            <form id="directions-input" method="get" action="">
-                Enter your Address/Postcode:
-                <input type="text" name="address" placeholder="..." />
-                <input type="submit" value="Go" />
-            </form>
             <div id="directions-panel">
+                <form id="directions-input" method="get" action="">
+                    Enter your Address/Postcode:
+                    <input type="text" name="address" placeholder="..." />
+                    <input type="submit" value="Go" />
+                    <p class="error"></p>
+                </form>
                 <h4>Approaching from the North</h4>
                 <p class="oxygen smaller-font">Take the A286 from Haslemere towards Midhurst. As you enter the centre of Fernhurst take a right turn at the crossroads adjacent to Fernhurst Post Office. Follow this road (Vann Road) for 1.3 miles, and you will find us on the left. Visitor parking is located within our central courtyard.</p>
                 <h4>Approaching from the South</h4>

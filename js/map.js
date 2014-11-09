@@ -107,9 +107,9 @@ function showGoogleMaps() {
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('directions-panel'));
 
-    var contentString = '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
+    var contentString = '<div id="location-panel">' +
+//        '<div id="siteNotice">' +
+//        '</div>' +
         '<h1 id="firstHeading" class="firstHeading cinzel">Contract <span class="yel">Candles</span> Ltd</h1>' +
         '<p>Lower Lodge, Vann Road,</p>' +
         '<p>Fernhurst,</p>' +
@@ -166,7 +166,10 @@ function codeAddress(start) {
 
 
         } else {
-            alert('Geocode was not successful for the following reason: ' + status);
+
+            $('.error').html('Error: ' + status);
+            $('.error').removeClass('inactive');
+            //alert('Geocode was not successful for the following reason: ' + status);
         }
     });
 }
@@ -219,7 +222,8 @@ $(document).ready(function () {
     $dirForm.submit(function (event) {
         var userAddr = $dirForm.find('input[name=address]').val();
 
-        alert("Handler for .submit() called. userAddr: " + userAddr);
+        console.log("Handler for .submit() called. userAddr: " + userAddr);
+        $('.error').addClass('inactive');
         codeAddress(userAddr);
         event.preventDefault();
 

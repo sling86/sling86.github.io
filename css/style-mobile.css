@@ -158,3 +158,7 @@
 				background-size: contain;
 				opacity: 0.65;
 			}
+
+.logo {
+    font-size: 1.5em;
+}
