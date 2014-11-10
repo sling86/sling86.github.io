@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="css/style-normal.css" />
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
 </head>
 
 <body>
@@ -60,7 +61,7 @@
         <div class="content">
             <header>
                 <h2 class="cinzel logo">Contract <span class="yel">Candles</span></h2>
-                <p class="oxygen lighttext-shadow bar">Specialists in bespoke premium candles since 1997, offering a full design and technical service. Producers of candles and diffusers for renowned luxury brands, designers and boutique stores.</p>
+                <p class="oxygen lighttext-shadow bar gradient">Specialists in bespoke premium candles since 1997, offering a full design and technical service. Producers of candles and diffusers for renowned luxury brands, designers and boutique stores.</p>
             </header>
 
             <footer>
@@ -354,13 +355,16 @@
                 <img src="images/directions.svg" class="subhead" alt="Directions" />
                 <h2 style="display: none">Directions</h2>
             </header>
-            <div id="directions-panel">
-                <form id="directions-input" method="get" action="">
-                    Enter your Address/Postcode:
-                    <input type="text" name="address" placeholder="..." />
-                    <input type="submit" value="Go" />
-                    <p class="error"></p>
+            <form id="directions-input" method="get" action="">
+                <table>
+                    <tr>
+                        <td><input type="text" name="address" placeholder="Address / Postcode..." value="bn163pj" /></td><td><input type="submit" value="Go" /></td>
+                    </tr>
+                </table>
+                <p class="error"></p>
                 </form>
+            <div id="directions-panel">
+
                 <div id="directions-wording">
                     <h4>Approaching from the North</h4>
                     <p class="oxygen smaller-font">Take the A286 from Haslemere towards Midhurst. As you enter the centre of Fernhurst take a right turn at the crossroads adjacent to Fernhurst Post Office. Follow this road (Vann Road) for 1.3 miles, and you will find us on the left. Visitor parking is located within our central courtyard.</p>
