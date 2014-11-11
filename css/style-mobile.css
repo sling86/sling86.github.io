@@ -161,4 +161,11 @@
 
 .logo {
     font-size: 1.5em;
+    display: none;
+}
+.bar {
+    padding: 1em;
+}
+.slogan { 
+    width:95%;
 }
