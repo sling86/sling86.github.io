@@ -3,9 +3,8 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-(function ($) { 
-
+(function ($)
+{
     var settings = {
 
         // Fullscreen?
@@ -19,58 +18,74 @@
 
     };
 
-    skel.init({
+    skel.init(
+    {
         reset: 'full',
-        breakpoints: {
-            'max': {
+        breakpoints:
+        {
+            'max':
+            {
                 range: '*',
                 href: 'css/style.css',
                 containers: 1440,
-                viewport: {
+                viewport:
+                {
                     scalable: false
                 },
-                grid: {
+                grid:
+                {
                     gutters: 40
                 }
             },
-            'wide': {
+            'wide':
+            {
                 range: '-1920',
                 href: 'css/style-wide.css',
                 containers: 1360
             },
-            'normal': {
+            'normal':
+            {
                 range: '-1680',
                 href: 'css/style-normal.css',
                 containers: 1200
             },
-            'narrow': {
+            'narrow':
+            {
                 range: '-1280',
                 href: 'css/style-narrow.css',
                 containers: 960
             },
-            'narrower': {
+            'narrower':
+            {
                 range: '-1000',
                 href: 'css/style-narrower.css',
                 containers: '95%'
             },
-            'mobile': {
+            'mobile':
+            {
                 range: '-736',
                 href: 'css/style-mobile.css',
-                grid: {
+                grid:
+                {
                     gutters: 20
                 }
             },
-            'mobile-narrow': {
+            'mobile-narrow':
+            {
                 range: '-480',
-                grid: {
+                grid:
+                {
                     collapse: true,
                     gutters: 10
                 }
             }
         }
     });
+    
+    var clickDestination = 'ready';
 
-    $(function () {
+    $(function ()
+    {
 
         var $window = $(window),
             $body = $('body'),
@@ -82,7 +97,8 @@
         // Settings.
 
         // IE<10?
-        if (skel.vars.IEVersion < 10) {
+        if (skel.vars.IEVersion < 10)
+        {
 
             // Turn off transitions.
             settings.sectionTransitions = false;
@@ -90,7 +106,8 @@
         }
 
         // Touch?
-        if (skel.vars.isTouch) {
+        if (skel.vars.isTouch)
+        {
 
             // Disable section transitions
             settings.sectionTransitions = false;
@@ -105,10 +122,13 @@
             .addClass('is-loading')
             .fadeTo(0, 0.0001);
 
-        $window.load(function () {
-            window.setTimeout(function () {
+        $window.load(function ()
+        {
+            window.setTimeout(function ()
+            {
                 $all
-                    .fadeTo(settings.fadeInSpeed, 1, function () {
+                    .fadeTo(settings.fadeInSpeed, 1, function ()
+                    {
                         $body.removeClass('is-loading');
                         $all.fadeTo(0, 1);
                     });
@@ -117,10 +137,12 @@
 
         // Forms (IE<10).
         var $form = $('form');
-        if ($form.length > 0) {
+        if ($form.length > 0)
+        {
 
             $form.find('.form-button-submit')
-                .on('click', function () {
+                .on('click', function ()
+                {
                     $(this).parents('form').submit();
                     return false;
                 });
@@ -131,32 +153,41 @@
             //                    return false;
             //                });
 
-            if (skel.vars.IEVersion < 10) {
-                $.fn.n33_formerize = function () {
+            if (skel.vars.IEVersion < 10)
+            {
+                $.fn.n33_formerize = function ()
+                {
                     var _fakes = new Array(),
                         _form = $(this);
-                    _form.find('input[type=text],textarea').each(function () {
+                    _form.find('input[type=text],textarea').each(function ()
+                    {
                         var e = $(this);
-                        if (e.val() == '' || e.val() == e.attr('placeholder')) {
+                        if (e.val() == '' || e.val() == e.attr('placeholder'))
+                        {
                             e.addClass('formerize-placeholder');
                             e.val(e.attr('placeholder'));
                         }
-                    }).blur(function () {
+                    }).blur(function ()
+                    {
                         var e = $(this);
                         if (e.attr('name').match(/_fakeformerizefield$/)) return;
-                        if (e.val() == '') {
+                        if (e.val() == '')
+                        {
                             e.addClass('formerize-placeholder');
                             e.val(e.attr('placeholder'));
                         }
-                    }).focus(function () {
+                    }).focus(function ()
+                    {
                         var e = $(this);
                         if (e.attr('name').match(/_fakeformerizefield$/)) return;
-                        if (e.val() == e.attr('placeholder')) {
+                        if (e.val() == e.attr('placeholder'))
+                        {
                             e.removeClass('formerize-placeholder');
                             e.val('');
                         }
                     });
-                    _form.find('input[type=password]').each(function () {
+                    _form.find('input[type=password]').each(function ()
+                    {
                         var e = $(this);
                         var x = $($('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text'));
                         if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield');
@@ -164,54 +195,67 @@
                         x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e);
                         if (e.val() == '') e.hide();
                         else x.hide();
-                        e.blur(function (event) {
+                        e.blur(function (event)
+                        {
                             event.preventDefault();
                             var e = $(this);
                             var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]');
-                            if (e.val() == '') {
+                            if (e.val() == '')
+                            {
                                 e.hide();
                                 x.show();
                             }
                         });
-                        x.focus(function (event) {
+                        x.focus(function (event)
+                        {
                             event.preventDefault();
                             var x = $(this);
                             var e = x.parent().find('input[name=' + x.attr('name').replace('_fakeformerizefield', '') + ']');
                             x.hide();
                             e.show().focus();
                         });
-                        x.keypress(function (event) {
+                        x.keypress(function (event)
+                        {
                             event.preventDefault();
                             x.val('');
                         });
                     });
-                    _form.submit(function () {
-                        $(this).find('input[type=text],input[type=password],textarea').each(function (event) {
+                    _form.submit(function ()
+                    {
+                        $(this).find('input[type=text],input[type=password],textarea').each(function (event)
+                        {
                             var e = $(this);
                             if (e.attr('name').match(/_fakeformerizefield$/)) e.attr('name', '');
-                            if (e.val() == e.attr('placeholder')) {
+                            if (e.val() == e.attr('placeholder'))
+                            {
                                 e.removeClass('formerize-placeholder');
                                 e.val('');
                             }
                         });
-                    }).bind("reset", function (event) {
+                    }).bind("reset", function (event)
+                    {
                         event.preventDefault();
                         $(this).find('select').val($('option:first').val());
-                        $(this).find('input,textarea').each(function () {
+                        $(this).find('input,textarea').each(function ()
+                        {
                             var e = $(this);
                             var x;
                             e.removeClass('formerize-placeholder');
-                            switch (this.type) {
+                            switch (this.type)
+                            {
                             case 'submit':
                             case 'reset':
                                 break;
                             case 'password':
                                 e.val(e.attr('defaultValue'));
                                 x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]');
-                                if (e.val() == '') {
+                                if (e.val() == '')
+                                {
                                     e.hide();
                                     x.show();
-                                } else {
+                                }
+                                else
+                                {
                                     e.show();
                                     x.hide();
                                 }
@@ -223,7 +267,8 @@
                             case 'text':
                             case 'textarea':
                                 e.val(e.attr('defaultValue'));
-                                if (e.val() == '') {
+                                if (e.val() == '')
+                                {
                                     e.addClass('formerize-placeholder');
                                     e.val(e.attr('placeholder'));
                                 }
@@ -233,7 +278,8 @@
                                 break;
                             }
                         });
-                        window.setTimeout(function () {
+                        window.setTimeout(function ()
+                        {
                             for (x in _fakes) _fakes[x].trigger('formerize_sync');
                         }, 10);
                     });
@@ -244,10 +290,12 @@
 
             // Custom select.
             $form.find('.select select')
-                .on('focus', function () {
+                .on('focus', function ()
+                {
                     $(this).parent().addClass('focus');
                 })
-                .on('blur', function () {
+                .on('blur', function ()
+                {
                     $(this).parent().removeClass('focus');
                 });
 
@@ -258,7 +306,8 @@
             $(':last-child').addClass('last-child');
 
         // Gallery.
-        $('.gallery').poptrox({
+        $('.gallery').poptrox(
+        {
             baseZIndex: 10001,
             useBodyOverflow: false,
             usePopupEasyClose: false,
@@ -272,25 +321,33 @@
         });
 
         // Section transitions.
-
-        if (settings.sectionTransitions) {
+        if (settings.sectionTransitions)
+        {
 
 
             // Intro.
             $('#intro')
-                .scrollwatch({
+                .scrollwatch(
+                {
                     delay: 50,
                     range: 0.5,
                     anchor: 'center',
-                    init: function (t) {
+                    init: function (t)
+                    {
                         t.addClass('inactive');
                     },
-                    on: function (t) {
+                    on: function (t)
+                    {
+                        console.log("scrolled onto Intro");
                         t.removeClass('inactive');
                         $logo.addClass('inactive');
-
+                        if (clickDestination === 'ready'){
+                            scrollTM('#'+t.attr('id'));
+                        }
+                        //                        $('a[href="#'+anchor+'"]').click();
                     },
-                    off: function (t) {
+                    off: function (t)
+                    {
                         t.addClass('inactive');
                         $logo.removeClass('inactive');
                     }
@@ -316,19 +373,26 @@
             //                });
 
             $('.main.style2')
-                .scrollwatch({
+                .scrollwatch(
+                {
                     delay: 50,
                     range: 0.5,
                     anchor: 'center',
-                    init: function (t) {
+                    init: function (t)
+                    {
                         t.addClass('inactive');
 
                     },
-                    on: function (t) {
+                    on: function (t)
+                    {
                         t.removeClass('inactive');
                         $logo.removeClass('inactive');
+                        if (clickDestination === 'ready'){
+                            scrollTM('#'+t.attr('id'));
+                        }
                     },
-                    off: function (t) {
+                    off: function (t)
+                    {
                         t.addClass('inactive');
                     }
                 });
@@ -336,34 +400,44 @@
 
             // Gallery.
             $('#gallery')
-                .scrollwatch({
+                .scrollwatch(
+                {
                     delay: 25,
                     range: 0.6,
                     anchor: 'center',
-                    init: function (t) {
+                    init: function (t)
+                    {
                         t.find('.row.images').addClass('inactive');
                     },
-                    on: function (t) {
+                    on: function (t)
+                    {
                         var rows = t.find('.row.images'),
                             length = rows.length,
                             n = 0;
-
-                        rows.each(function () {
+                        rows.each(function ()
+                        {
                             var row = $(this);
-                            window.setTimeout(function () {
+                            window.setTimeout(function ()
+                            {
                                 row.removeClass('inactive');
                             }, 100 * (length - n++));
                         });
                         $logo.removeClass('inactive');
+                        if (clickDestination === 'ready'){
+                            scrollTM('#'+t.attr('id'));
+                        }
                     },
-                    off: function (t) {
+                    off: function (t)
+                    {
                         var rows = t.find('.row.images'),
                             length = rows.length,
                             n = 0;
-
-                        rows.each(function () {
+                        
+                        rows.each(function ()
+                        {
                             var row = $(this);
-                            window.setTimeout(function () {
+                            window.setTimeout(function ()
+                            {
                                 row.addClass('inactive');
                             }, 100 * (length - n++));
                         });
@@ -372,19 +446,26 @@
 
             // Contact.
             $('#contact')
-                .scrollwatch({
+                .scrollwatch(
+                {
                     delay: 25,
                     range: 0.5,
                     anchor: 'center',
-                    init: function (t) {
+                    init: function (t)
+                    {
                         t.addClass('inactive');
                         $logo.removeClass('inactive');
                     },
-                    on: function (t) {
+                    on: function (t)
+                    {
                         t.removeClass('inactive');
                         $logo.removeClass('inactive');
+                        if (clickDestination === 'ready'){
+                            scrollTM('#'+t.attr('id'));
+                        }
                     },
-                    off: function (t) {
+                    off: function (t)
+                    {
                         t.addClass('inactive');
                     }
                 });
@@ -394,7 +475,8 @@
         // Events.
 
         // Change (skel).
-        skel.change(function () {
+        skel.change(function ()
+        {
 
             // Force touch mode if we're in mobile.
             if (skel.isActive('mobile'))
@@ -403,9 +485,11 @@
                 $body.removeClass('touch');
 
             // Section transitions.
-            if (settings.sectionTransitions) {
+            if (settings.sectionTransitions)
+            {
 
-                if (skel.isActive('mobile')) {
+                if (skel.isActive('mobile'))
+                {
 
                     // Intro.
                     $('#intro')
@@ -426,7 +510,9 @@
                     $('#contact')
                         .scrollwatchSuspend();
 
-                } else {
+                }
+                else
+                {
 
                     // Intro.
                     $('#intro')
@@ -455,21 +541,25 @@
         // Resize.
         var resizeTimeout, resizeScrollTimeout;
 
-        $window.resize(function () {
+        $window.resize(function ()
+        {
 
             // Disable animations/transitions.
             $body.addClass('is-loading');
 
             window.clearTimeout(resizeTimeout);
 
-            resizeTimeout = window.setTimeout(function () {
+            resizeTimeout = window.setTimeout(function ()
+            {
 
                 // Update scrolly links.
                 $('a[href^=#]').scrolly(1500, $header.outerHeight() - 1);
 
                 // Resize fullscreen elements.
-                if (settings.fullScreen && !skel.isActive('mobile')) {
-                    $('.fullscreen').each(function () {
+                if (settings.fullScreen && !skel.isActive('mobile'))
+                {
+                    $('.fullscreen').each(function ()
+                    {
 
                         var $t = $(this),
                             $c = $t.children('.content'),
@@ -481,19 +571,24 @@
                         //x = Round(221.5) = 222
                         //x = 222
 
-                        if ($t.attr('id') == 'intro') {
+                        if ($t.attr('id') == 'intro')
+                        {
                             $t
                                 .css('padding-top', '')
                                 .css('padding-bottom', '');
                             var introHeight = Math.max(100, Math.round($window.height() - $header.outerHeight()));
                             $t.find('div.content').css('height', introHeight); //450 when / 2
 
-                        } else if ($t.attr('id') == 'directions') {
+                        }
+                        else if ($t.attr('id') == 'directions')
+                        {
                             $t
-                            .css('padding-top', x)
-                            .css('padding-bottom', x);
+                                .css('padding-top', x)
+                                .css('padding-bottom', x);
 
-                        } else {
+                        }
+                        else
+                        {
                             $t
                                 .css('padding-top', x)
                                 .css('padding-bottom', x);
@@ -501,14 +596,16 @@
 
 
                     });
-                } else
+                }
+                else
                     $('.fullscreen')
                     .css('padding-top', '')
                     .css('padding-bottom', '');
 
 
                 // Re-enable animations/transitions.
-                window.setTimeout(function () {
+                window.setTimeout(function ()
+                {
                     $body.removeClass('is-loading');
                     $window.trigger('scroll');
                 }, 0);
@@ -518,76 +615,36 @@
         });
 
         // Trigger events on load.
-        $window.load(function () {
-
+        $window.load(function ()
+        {
             $window
                 .trigger('resize')
                 .trigger('scroll');
-
         });
+        
+        $('a[href^=#]').click(function(){
+            var clickedItem = $(this);
+            console.log('clickedItem : ' + clickedItem);
+            var clickedItemAttr = clickedItem.attr('href');
+            console.log('clickedItemAttr : ' + clickedItemAttr);
+            if (clickDestination === 'ready'){
+                clickDestination = clickedItemAttr;
+            };
+        })
 
     });
-    
-    
-    
-    ///////////////////////////////////////////////////////////////////////////////////
-    
-    
-//    $.fn.isOnScreen = function(){
-//    
-//    var win = $(window);
-//    
-//    var viewport = {
-//        top : win.scrollTop(),
-//        left : win.scrollLeft()
-//    };
-//    viewport.right = viewport.left + win.width();
-//    viewport.bottom = viewport.top + win.height();
-//    
-//    var bounds = this.offset();
-//    bounds.right = bounds.left + this.outerWidth();
-//    bounds.bottom = bounds.top + this.outerHeight();
-//    
-//    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-//    
-//};
 
-//$('.box').click(function(){
-//    alert($('.orange').isOnScreen());
-//});
- 
-    ///////////////////////////////////////////////////////////////////
+    function scrollTM(anchor)
+    {
+        //    e.preventDefault();
+        
+        $('a[href="' + anchor + '"]').click();
+        setTimeout(function ()
+        {
+            return
+        }, 3000);
+          
 
-//    var lastScrollTop = 0, delta = 5;
-//    var su = 0, sd = 0;
-//    $(window).scroll(function(event){
-//       var st = $(this).scrollTop();
-//        
-//
-//       if(Math.abs(lastScrollTop - st) <= delta)
-//          return;        
-//
-//       if (st > lastScrollTop){
-//           // downscroll code
-//           if(su>0)su=0;
-//           sd++;
-////           if(sd>=5);
-//           console.log('scroll down: ' + sd);
-//           
-//           console.log('TEST: '+ $('section').isOnScreen());
-//       } else {
-//          // upscroll code
-//           if(sd>0)sd=0;
-//           su++;
-//          console.log('scroll up: ' + su);
-//       }
-//       lastScrollTop = st;
-//    });
-    
-    //////////////////////////////////////////////////////
-    
-    
-    
-
+    }
 
 })(jQuery);
