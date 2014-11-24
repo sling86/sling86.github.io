@@ -17,10 +17,14 @@
     <script src="js/jquery.poptrox.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/waypoints.js"></script>
+    
     <script src="js/skel.min.js"></script>
+    
     <script src="js/init.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
     <script src="js/map.js"></script>
+    
     <noscript>
         <link rel="stylesheet" href="css/skel.css" />
         <link rel="stylesheet" href="css/style.css" />
@@ -123,74 +127,105 @@
                 <h2 style="display: none">Gallery</h2>
             </header>
             <!-- Lightbox Gallery  -->
-            <div class="container small gallery">
+    <div class="container small gallery">
 
-                <div class="row flush images">
-                    <div class="6u"><a href="images/fulls/wicks.jpg" class="image fit from-left">
-                            <img src="images/thumbs/wicks-thmb.jpg" title="Candle Wicks" alt="Candle Wicks" />
-                        </a></div>
-<div class="6u"><a href="images/fulls/lava.jpg" class="image fit from-right">
-                            <img src="images/thumbs/lava-thmb.jpg" title="Candles after pouring" alt="Candles after pouring" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/fulls/solid.jpg" class="image fit from-left">
-                            <img src="images/thumbs/solid-thmb.jpg" title="The Flashing Line" alt="The Flashing Line" />
-                        </a></div>
-<div class="6u"><a href="images/fulls/top.jpg" class="image fit from-right">
-                            <img src="images/thumbs/top-thmb.jpg" title="After Flashing" alt="After Flashing" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/bg/pap-bg.jpg" class="image fit from-left">
-                            <img src="images/thumbs/pap-thmb.jpg" title="Ready for Packaging" alt="Ready for Packaging" />
-                        </a></div>
-<div class="6u"><a href="images/fulls/clean.jpg" class="image fit from-right">
-                            <img src="images/thumbs/clean-thmb.jpg" title="Glass Cleaning and Checking" alt="Glass Cleaning and Checking" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/fulls/glass.jpg" class="image fit from-left">
-                            <img src="images/thumbs/glass-thmb.jpg" title="The Packing Line" alt="The Packing Line" />
-                        </a></div>
-<div class="6u"><a href="images/fulls/apply.jpg" class="image fit from-right">
-                            <img src="images/thumbs/apply-thmb.jpg" title="Applying Label" alt="Applying Label" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/fulls/trim.jpg" class="image fit from-left">
-                            <img src="images/thumbs/trim-thmb.jpg" title="Wick Trimming" alt="Wick Trimming" />
-                        </a></div>
-<div class="6u"><a href="images/bg/dod-bg.jpg" class="image fit from-right">
-                            <img src="images/thumbs/dod-thmb.jpg" title="Adding Lid" alt="Adding Lid" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/fulls/wraps.jpg" class="image fit from-left">
-                            <img src="images/thumbs/wraps-thmb.jpg" title="The Finished Product" alt="The Finished Product" />
-                        </a></div>
-<div class="6u"><a href="images/fulls/red.jpg" class="image fit from-right">
-                            <img src="images/thumbs/red-thmb.jpg" title="The Pillar Section" alt="The Pillar Section" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/fulls/espa.jpg" class="image fit from-left">
-                            <img src="images/thumbs/espa-thmb.jpg" title="Finished Candles" alt="Finished Candles" />
-                        </a></div>
-<div class="6u"><a href="images/fulls/winter.jpg" class="image fit from-right">
-                            <img src="images/thumbs/winter-thmb.jpg" title="Christmas Candles" alt="Christmas Candles" />
-                        </a></div>
-                </div>
-<div class="row flush images">
-                    <div class="6u"><a href="images/fulls/pine.jpg" class="image fit from-left">
-                            <img src="images/thumbs/pine-thmb.jpg" title="Oak Hills Diffuser" alt="Oak Hills Diffuser" />
-                        </a></div>
-<div class="6u"><a href="images/bg/oak-bg.jpg" class="image fit from-right">
-                            <img src="images/thumbs/oak-thmb.jpg" title="Oak Hills Diffuser" alt="Oak Hills Diffuser" />
-                        </a></div>
-                </div>
-
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/wicks.jpg" class="image fit from-left">
+                    <img src="images/thumbs/wicks-thmb.jpg" title="Candle Wicks" alt="Candle Wicks" />
+                </a>
             </div>
+            <div class="6u">
+                <a href="images/fulls/lava.jpg" class="image fit from-right">
+                    <img src="images/thumbs/lava-thmb.jpg" title="Candles after pouring" alt="Candles after pouring" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/solid.jpg" class="image fit from-left">
+                    <img src="images/thumbs/solid-thmb.jpg" title="The Flashing Line" alt="The Flashing Line" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/fulls/top.jpg" class="image fit from-right">
+                    <img src="images/thumbs/top-thmb.jpg" title="After Flashing" alt="After Flashing" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/bg/pap-bg.jpg" class="image fit from-left">
+                    <img src="images/thumbs/pap-thmb.jpg" title="Ready for Packaging" alt="Ready for Packaging" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/fulls/clean.jpg" class="image fit from-right">
+                    <img src="images/thumbs/clean-thmb.jpg" title="Glass Cleaning and Checking" alt="Glass Cleaning and Checking" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/glass.jpg" class="image fit from-left">
+                    <img src="images/thumbs/glass-thmb.jpg" title="The Packing Line" alt="The Packing Line" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/fulls/apply.jpg" class="image fit from-right">
+                    <img src="images/thumbs/apply-thmb.jpg" title="Applying Label" alt="Applying Label" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/trim.jpg" class="image fit from-left">
+                    <img src="images/thumbs/trim-thmb.jpg" title="Wick Trimming" alt="Wick Trimming" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/bg/dod-bg.jpg" class="image fit from-right">
+                    <img src="images/thumbs/dod-thmb.jpg" title="Adding Lid" alt="Adding Lid" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/wraps.jpg" class="image fit from-left">
+                    <img src="images/thumbs/wraps-thmb.jpg" title="The Finished Product" alt="The Finished Product" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/fulls/red.jpg" class="image fit from-right">
+                    <img src="images/thumbs/red-thmb.jpg" title="The Pillar Section" alt="The Pillar Section" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/espa.jpg" class="image fit from-left">
+                    <img src="images/thumbs/espa-thmb.jpg" title="Finished Candles" alt="Finished Candles" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/fulls/winter.jpg" class="image fit from-right">
+                    <img src="images/thumbs/winter-thmb.jpg" title="Christmas Candles" alt="Christmas Candles" />
+                </a>
+            </div>
+        </div>
+        <div class="row flush images">
+            <div class="6u">
+                <a href="images/fulls/pine.jpg" class="image fit from-left">
+                    <img src="images/thumbs/pine-thmb.jpg" title="Pine Cone and Clove Candles and Diffuser" alt="Pine Cone and Clove Candles and Diffuser" />
+                </a>
+            </div>
+            <div class="6u">
+                <a href="images/bg/oak-bg.jpg" class="image fit from-right">
+                    <img src="images/thumbs/oak-thmb.jpg" title="Oak Hills Diffuser" alt="Oak Hills Diffuser" />
+                </a>
+            </div>
+        </div>
+        </div>
 
         </div>
 <!--        <a href="#factshop" class="fullwidth">Next</a>-->
@@ -357,5 +392,23 @@
     </footer>
 
 </body>
-
+<script type="text/javascript">
+        $('#one').waypoint(function(direction) {
+            console.log('#one 5% from the top and going '+ direction);
+            if(direction==='down'){$('a[href="#one"]').click();}
+        }, { offset: '5%' });
+        $('#two').waypoint(function(direction) {
+            console.log('#two 5% from the top and going '+ direction);
+            if(direction==='down'){$('a[href="#two"]').click();}
+        }, { offset: '5%' });
+        $('#three').waypoint(function(direction) {
+            console.log('#three 5% from the top and going '+ direction);
+            if(direction==='down'){$('a[href="#three"]').click();}
+        }, { offset: '5%' });
+        $('#gallery').waypoint(function(direction) {
+            console.log('#gallery 5% from the top and going '+ direction);
+            if(direction==='down'){$('a[href="#gallery"]').click();}
+        }, { offset: '5%' });
+    
+    </script>
 </html>

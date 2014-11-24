@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function ($) {
+(function ($) { 
 
     var settings = {
 
@@ -527,22 +527,67 @@
         });
 
     });
+    
+    
+    
+    ///////////////////////////////////////////////////////////////////////////////////
+    
+    
+//    $.fn.isOnScreen = function(){
+//    
+//    var win = $(window);
+//    
+//    var viewport = {
+//        top : win.scrollTop(),
+//        left : win.scrollLeft()
+//    };
+//    viewport.right = viewport.left + win.width();
+//    viewport.bottom = viewport.top + win.height();
+//    
+//    var bounds = this.offset();
+//    bounds.right = bounds.left + this.outerWidth();
+//    bounds.bottom = bounds.top + this.outerHeight();
+//    
+//    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+//    
+//};
 
-    var lastScrollTop = 0, delta = 5;
-    $(window).scroll(function(event){
-       var st = $(this).scrollTop();
+//$('.box').click(function(){
+//    alert($('.orange').isOnScreen());
+//});
+ 
+    ///////////////////////////////////////////////////////////////////
 
-       if(Math.abs(lastScrollTop - st) <= delta)
-          return;
+//    var lastScrollTop = 0, delta = 5;
+//    var su = 0, sd = 0;
+//    $(window).scroll(function(event){
+//       var st = $(this).scrollTop();
+//        
+//
+//       if(Math.abs(lastScrollTop - st) <= delta)
+//          return;        
+//
+//       if (st > lastScrollTop){
+//           // downscroll code
+//           if(su>0)su=0;
+//           sd++;
+////           if(sd>=5);
+//           console.log('scroll down: ' + sd);
+//           
+//           console.log('TEST: '+ $('section').isOnScreen());
+//       } else {
+//          // upscroll code
+//           if(sd>0)sd=0;
+//           su++;
+//          console.log('scroll up: ' + su);
+//       }
+//       lastScrollTop = st;
+//    });
+    
+    //////////////////////////////////////////////////////
+    
+    
+    
 
-       if (st > lastScrollTop){
-           // downscroll code
-           console.log('scroll down');
-       } else {
-          // upscroll code
-          console.log('scroll up');
-       }
-       lastScrollTop = st;
-    });
 
 })(jQuery);
