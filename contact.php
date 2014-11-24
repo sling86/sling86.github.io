@@ -1,3 +1,4 @@
+<meta http-equiv="refresh" content="3;URL=/#contact" />
 <?php 
 if ($_POST['email']<>"") { 
     
@@ -5,9 +6,8 @@ if ($_POST['email']<>"") {
 
 	$subject = "Contract Candles - Site Contact Form";
 	
-	$headers = "From: " . strip_tags($_POST['req-email']) . "\r\n";
-	$headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
-	$headers .= "CC: susan@example.com\r\n";
+	$headers = "From: " . strip_tags($_POST['email']) . "\r\n";
+	$headers .= "Reply-To: ". strip_tags($_POST['email']) . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	
@@ -21,7 +21,7 @@ if ($_POST['email']<>"") {
 	
     mail($to, $subject, $message, $headers) or die ("Failure"); 
 ?> 
-Your message was sent
+<p>Your message was sent, taking you back to the site!</p>
 <?php 
 } else { 
 ?> 
