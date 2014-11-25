@@ -173,7 +173,7 @@ section {
 .slogan { 
     width:95%;
 }
-#intro, #one, #two, #three, #factshop, #opentime, #directions {    
+#intro {    
     height: 94vh;
 }
 
