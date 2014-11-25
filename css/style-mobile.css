@@ -173,7 +173,13 @@ section {
 .slogan { 
     width:95%;
 }
-#intro {    
-    margin-bottom: -5%;
-    height: 95vh;
+#intro, #one, #two, #three, #factshop, #opentime, #directions {    
+    height: 94vh;
+}
+
+.smaller-font {
+    font-size: 0.8m;
+}
+.subhead {
+    height: 2em;
 }
