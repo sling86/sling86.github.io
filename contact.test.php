@@ -7,8 +7,8 @@ if ($_POST['email']<>"") {
 	$comment = strip_tags($_POST["message"]);
 
     // multiple recipients
-	$to = 'Allan <allan@contractcandles.com>' . ', '; // note the comma
-	$to .= 'Fiona <fiona@contractcandles.com>';
+	$to = 'Tony <tony@contractcandles.com>' . ', '; // note the comma
+	$to .= 'Other tony <t.malins@gmail.com>';
 	
 	$subject = 'Contract Candles - Site Contact Form';
 	
@@ -39,6 +39,8 @@ if ($_POST['email']<>"") {
 	
 	
     mail($to, $subject, $message, $headers) or die ("Failure"); 
+	
+	echo 'This ' . 'string ' . 'was ' . 'made ' . 'with concatenation.' . "\n";
 ?> 
 <p>Your message was sent, taking you back to the site!</p>
 <?php 
@@ -56,7 +58,7 @@ if ($_POST['email']<>"") {
 </tr>
 <tr>
 <td class="bodytext">Comment:</td>
-<td><textarea name="comment" cols="45" rows="6" id="comment" class="bodytext"></textarea></td>
+<td><textarea name="message" cols="45" rows="6" id="message" class="bodytext"></textarea></td>
 </tr>
 <tr>
 <td class="bodytext"> </td>
