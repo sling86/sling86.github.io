@@ -336,10 +336,10 @@
                     },
                     on: function (t)
                     {
-                        console.log("scrolled onto Intro");
+//                        console.log("scrolled onto Intro");
                         t.removeClass('inactive');
                         $logo.addClass('inactive');
-                        scrollTM('#' + t.attr('id'));
+//                        scrollTM('#' + t.attr('id'));
                     },
                     off: function (t)
                     {
@@ -363,7 +363,7 @@
                     {
                         t.removeClass('inactive');
                         $logo.removeClass('inactive');
-                        scrollTM('#' + t.attr('id'));
+//                        scrollTM('#' + t.attr('id'));
                     },
                     off: function (t)
                     {
@@ -431,7 +431,7 @@
                     {
                         t.removeClass('inactive');
                         $logo.removeClass('inactive');
-                        scrollTM('#' + t.attr('id'));
+//                        scrollTM('#' + t.attr('id'));
                     },
                     off: function (t)
                     {
@@ -605,7 +605,6 @@
 
     function scrollTM(anchor)
     {
-        //    e.preventDefault();
           if (anchor != undefined)   {
 //              $('a[href='+anchor+']').scrolly();
 //              $('a[href='+anchor+']').scrollTop(0);

@@ -1038,6 +1038,11 @@ a:hover.fullwidth {
     color: #39454b;
     text-shadow: 1px 1px 3px rgb(255, 255, 255);
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0iYSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHI9IjUzJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
     transition: all 0.2s ease-in-out;
     opacity: 1.0;
 }
@@ -1112,18 +1117,31 @@ input[type="reset"]:active,
     z-index: 0;
     /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-#directions-input {width: 90%}
+#directions-input {
+    width: 90%;
+}
+#directions-input > table tr {
+    height: 2em;
+    vertical-align: middle;
+    padding: 0;
+}
 
 #directions-input > table tr > td:nth-child(1)  {
     width: 80%;
     padding-right: 0.5em;
+    height: 2em;
+    vertical-align: middle;
 }
 #directions-input > table tr > td:nth-child(2)  {
     width: 20%;
+    height: 2em;
+    vertical-align: middle;
 }
 #directions-input input[type="text"] {
     height: 2em;
     line-height: 2em;
+    padding: 0em 0.5em;
+    vertical-align: middle;
 }
 #directions-input input[type="submit"] {
     height: 2em;
