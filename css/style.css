@@ -996,18 +996,19 @@ a.fullwidth {
     width: 100%;
     bottom: 0;
     height: 4em;
-    background: url('images/dark-arrow-simp.svg'), url('images/down-bg-grey.png');
-    background-position: center 60%, 50%;
+    background: url('images/dark-arrow-simp.svg'), url('images/down-bg.png');
+    background-position: center 60%, 0 30%;
     background-repeat: no-repeat, repeat-x;
     background-size: 3%, auto;
     text-indent: -3000px;
     direction: ltr;
     transition: all 0.2s ease-in-out;
-    opacity: 1.0;
+    opacity: 0;
 }
 a:hover.fullwidth {
-    background-position: center center, 0 70%;
-    background-size: 3.3%, auto;
+    background-position: center center, 0 60%;
+    background-size: 3.6%, auto;
+    opacity: 1.0;
 }
 .inactive a.fullwidth {
     opacity: 0;
