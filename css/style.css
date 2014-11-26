@@ -636,11 +636,10 @@ body {
 /*********************************************************************************/
 
 #one {
-    /* background: url('images/overlay.png'), url('../images/bg/bob-bg.jpg'); */
-    background: url(''), url('../images/bg/bob-bg.jpg');
-    background-size: 256px 256px, cover;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background: url('../images/bg/bob-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 /*********************************************************************************/
 
@@ -649,11 +648,10 @@ body {
 /*********************************************************************************/
 
 #two {
-    /*    background: url('images/overlay.png'), url('../images/bg/dod-bg.jpg');*/
-    background: url(''), url('../images/bg/oak-bg.jpg');
-    background-size: 256px 256px, cover;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background: url('../images/bg/oak-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 /*********************************************************************************/
 
@@ -662,11 +660,10 @@ body {
 /*********************************************************************************/
 
 #three {
-    /*    background: url('images/overlay.png'), url('../images/bg/pap-bg.jpg');*/
-    background: url(''), url('../images/bg/pap-bg.jpg');
-    background-size: 256px 256px, cover;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background: url('../images/bg/pap-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 /*********************************************************************************/
 
@@ -675,11 +672,10 @@ body {
 /*********************************************************************************/
 
 #factshop {
-    /*    background: url('images/overlay.png'), url('../images/bg/fs-bg.jpg');*/
-    background: url(''), url('../images/bg/fs-bg.jpg');
-    background-size: 256px 256px, cover;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background: url('../images/bg/fs-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 /*********************************************************************************/
 
@@ -688,11 +684,10 @@ body {
 /*********************************************************************************/
 
 #opentime {
-    /*    background: url('images/overlay.png'), url('../images/bg/ot-bg.jpg');*/
-    background: url(''), url('../images/bg/ot-bg.jpg');
-    background-size: 256px 256px, cover;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background: url('../images/bg/ot-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 /*********************************************************************************/
 
@@ -765,10 +760,10 @@ body {
 /*********************************************************************************/
 
 #directions {
-    background: url(''), url('../images/bg/ot-bg.jpg');
-    background-size: 256px 256px, cover;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
+    background: url('../images/bg/ot-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 /*********************************************************************************/
 
@@ -996,23 +991,16 @@ body.touch .poptrox-popup .closer {
 }
 
 a.fullwidth {
-    /*
-    width: 100%;
-    display: block;
-    margin: 0;
-    height: 4em;
-    line-height: 4em;
-    */
     position: absolute;
     left: 0;
     width: 100%;
     bottom: 0;
     height: 4em;
-    background: url('images/dark-arrow-simp.svg'), url('images/down-bg.png');
+    background: url('images/dark-arrow-simp.svg'), url('images/down-bg-grey.png');
     background-position: center 60%, 50%;
     background-repeat: no-repeat, repeat-x;
     background-size: 3%, auto;
-    text-indent: -10000px;
+    text-indent: -3000px;
     direction: ltr;
     transition: all 0.2s ease-in-out;
     opacity: 1.0;

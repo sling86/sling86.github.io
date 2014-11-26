@@ -594,10 +594,10 @@
         $('a[href^=#]').click(function(){
             scrollSnapEnabled = false;
             var clickedItem = this;
-            console.log('clickedItem : ' + clickedItem);
+//            console.log('clickedItem : ' + clickedItem);
             var clickedItemAttr = clickedItem.hash;
-            console.log('clickedItemAttr : ' + clickedItemAttr);
-            console.log(this.hash);
+//            console.log('clickedItemAttr : ' + clickedItemAttr);
+//            console.log(this.hash);
         })
         
 
