@@ -333,6 +333,7 @@
                     init: function (t)
                     {
                         t.addClass('inactive');
+                        $logo.addClass('inactive');
                     },
                     on: function (t)
                     {
@@ -357,6 +358,7 @@
                     init: function (t)
                     {
                         t.addClass('inactive');
+                        $logo.removeClass('inactive');
 
                     },
                     on: function (t)
