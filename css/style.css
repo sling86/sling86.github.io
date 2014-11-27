@@ -999,15 +999,15 @@ a.fullwidth {
     background: url('images/dark-arrow-simp.svg'), url('images/down-bg.png');
     background-position: center 60%, 0 30%;
     background-repeat: no-repeat, repeat-x;
-    background-size: 3%, auto;
+    background-size: 5%, auto;
     text-indent: -3000px;
     direction: ltr;
     transition: all 0.2s ease-in-out;
-    opacity: 0;
+    opacity: 0.5;
 }
 a:hover.fullwidth {
-    background-position: center center, 0 60%;
-    background-size: 3.6%, auto;
+    background-position: center center, 0 50%;
+    background-size: 6%, auto;
     opacity: 1.0;
 }
 .inactive a.fullwidth {
