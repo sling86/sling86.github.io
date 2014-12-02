@@ -33,13 +33,13 @@ function showGoogleMaps() {
             "featureType": "administrative.land_parcel",
             "elementType": "all",
             "stylers": [{
-                "visibility": "off"
+                "visibility": "on"
             }]
         }, {
             "featureType": "landscape.man_made",
             "elementType": "all",
             "stylers": [{
-                "visibility": "off"
+                "visibility": "on"
             }]
         }, {
             "featureType": "transit",
@@ -75,7 +75,7 @@ function showGoogleMaps() {
             "featureType": "road.arterial",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "off"
+                "visibility": "on"
             }]
         }, {
             "featureType": "water",
@@ -108,8 +108,6 @@ function showGoogleMaps() {
     directionsDisplay.setPanel(document.getElementById('directions-wording'));
 
     var contentString = '<div id="location-panel">' +
-//        '<div id="siteNotice">' +
-//        '</div>' +
         '<h1 id="firstHeading" class="firstHeading cinzel">Contract <span class="yel">Candles</span> Ltd</h1>' +
         '<p>Lower Lodge, Vann Road,</p>' +
         '<p>Fernhurst,</p>' +
@@ -118,16 +116,6 @@ function showGoogleMaps() {
         '<p>GU27 3NH</p>' +
         '<p><a href="callto:+441428 645433">01428 645433</a></p>' +
         '</div>';
-
-    //    var contentString = '<div id="content">' +
-    //        '<div id="siteNotice">' +
-    //        '</div>' +
-    //        '<p class="oxygen smaller-font">Contract Candles Ltd' +
-    //        '<br>Lower Lodge, Vann Road, Fernhurst,' +
-    //        '<br>Haslemere, Surrey, GU27 3NH' +
-    //        '<br>01428 645433' +
-    //        '</p>' +
-    //        '</div>';
 
     var infowindow = new google.maps.InfoWindow({
         content: contentString
@@ -144,8 +132,6 @@ function showGoogleMaps() {
         infowindow.open(map, marker);
     });
     infowindow.open(map, marker);
-    //codeAddress("BN16 3PJ");
-    //    calcRoute()
 }
 
 function codeAddress(start) {
@@ -154,29 +140,16 @@ function codeAddress(start) {
         'address': address
     }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-
-            //            map.setCenter(results[0].geometry.location);
-            //            var marker = new google.maps.Marker({
-            //                map: map,
-            //                position: results[0].geometry.location
-            //            });
             $('#directions-wording').html('');
-
             calcRoute(results[0].geometry.location, latLng);
-
-
         } else {
-
             $('.error').html('Error: ' + status);
             $('.error').removeClass('inactive');
-            //alert('Geocode was not successful for the following reason: ' + status);
         }
     });
 }
 
 function calcRoute(start, end) {
-    //    var start = "BN16 3PJ";
-    //    var end = latLng;
     var request = {
         origin: start,
         destination: end,
@@ -190,43 +163,24 @@ function calcRoute(start, end) {
     });
 }
 
+function mapsLink(){
+    // If it's an iPhone..
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("iPod") != -1))
+         window.open("maps://maps.google.com/maps?daddr=lat,long&amp;ll=");
+    else
+         window.open("http://maps.google.com/maps?daddr=lat,long&amp;ll=");
+}
+
 google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 
 $(document).ready(function () {
-
-    // Your code here.
     var $dirForm = $("#directions-input");
-
-    //    jQuery.validator.addMethod(
-    //        "postcode",
-    //        function (value, element) {
-    //            var regPostcode = "/^([g][i][r][0][a][a])$|^((([a-pr-uwyz]{1}([0]|[1-9]\d?))|([a-pr-uwyz]{1}[a-hk-y]{1}([0]|[1-9]\d?))|([a-pr-uwyz]{1}[1-9][a-hjkps-uw]{1})|([a-pr-uwyz]{1}[a-hk-y]{1}[1-9][a-z]{1}))(\d[abd-hjlnp-uw-z]{2})?)$/i";
-    //            var re = new RegExp(regPostcode);
-    //            return this.optional(element) || re.test(value);
-    //        }, "Please correct the postcode"
-    //    );
-
-    //    $dirForm.validate({
-    //        debug: true,
-    //        submitHandler: function (form) {
-    //            // do other things for a valid form
-    //            var postCode = $dirForm.find('input[name=postcode]').val();
-    //
-    //            alert("Handler for .submit() called. Postcode: " + postCode);
-    //            codeAddress(postCode);
-    //            event.preventDefault();
-    //            //form.submit();
-    //        }
-    //    });
-
     $dirForm.submit(function (event) {
         var userAddr = $dirForm.find('input[name=address]').val();
-
-        console.log("Handler for .submit() called. userAddr: " + userAddr);
+//        console.log("Handler for .submit() called. userAddr: " + userAddr);
         $('.error').addClass('inactive');
         codeAddress(userAddr);
         event.preventDefault();
-
     });
-
 });

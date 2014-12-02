@@ -160,7 +160,7 @@
                     _form.find('input[type=text],textarea').each(function ()
                     {
                         var e = $(this);
-                        if (e.val() == '' || e.val() == e.attr('placeholder'))
+                        if (e.val() === '' || e.val() === e.attr('placeholder'))
                         {
                             e.addClass('formerize-placeholder');
                             e.val(e.attr('placeholder'));
@@ -169,7 +169,7 @@
                     {
                         var e = $(this);
                         if (e.attr('name').match(/_fakeformerizefield$/)) return;
-                        if (e.val() == '')
+                        if (e.val() === '')
                         {
                             e.addClass('formerize-placeholder');
                             e.val(e.attr('placeholder'));
@@ -188,17 +188,17 @@
                     {
                         var e = $(this);
                         var x = $($('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text'));
-                        if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield');
-                        if (e.attr('name') != '') x.attr('name', e.attr('name') + '_fakeformerizefield');
+                        if (e.attr('id') !== '') x.attr('id', e.attr('id') + '_fakeformerizefield');
+                        if (e.attr('name') !== '') x.attr('name', e.attr('name') + '_fakeformerizefield');
                         x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e);
-                        if (e.val() == '') e.hide();
+                        if (e.val() === '') e.hide();
                         else x.hide();
                         e.blur(function (event)
                         {
                             event.preventDefault();
                             var e = $(this);
                             var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]');
-                            if (e.val() == '')
+                            if (e.val() === '')
                             {
                                 e.hide();
                                 x.show();
@@ -224,7 +224,7 @@
                         {
                             var e = $(this);
                             if (e.attr('name').match(/_fakeformerizefield$/)) e.attr('name', '');
-                            if (e.val() == e.attr('placeholder'))
+                            if (e.val() === e.attr('placeholder'))
                             {
                                 e.removeClass('formerize-placeholder');
                                 e.val('');
@@ -247,7 +247,7 @@
                             case 'password':
                                 e.val(e.attr('defaultValue'));
                                 x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]');
-                                if (e.val() == '')
+                                if (e.val() === '')
                                 {
                                     e.hide();
                                     x.show();
@@ -265,7 +265,7 @@
                             case 'text':
                             case 'textarea':
                                 e.val(e.attr('defaultValue'));
-                                if (e.val() == '')
+                                if (e.val() === '')
                                 {
                                     e.addClass('formerize-placeholder');
                                     e.val(e.attr('placeholder'));
@@ -594,24 +594,24 @@
         });
         
         $('a[href^=#]').click(function(){
-            scrollSnapEnabled = false;
+//            scrollSnapEnabled = false;
             var clickedItem = this;
 //            console.log('clickedItem : ' + clickedItem);
             var clickedItemAttr = clickedItem.hash;
 //            console.log('clickedItemAttr : ' + clickedItemAttr);
 //            console.log(this.hash);
-        })
+        });
         
-
     });
 
     function scrollTM(anchor)
     {
-          if (anchor != undefined)   {
+          if (anchor !== undefined)   {
 //              $('a[href='+anchor+']').scrolly();
 //              $('a[href='+anchor+']').scrollTop(0);
           }   
     }
+    
     
     
 
