@@ -4,5 +4,15 @@ Disallow: /contact.php
 Disallow: /css
 Disallow: /fonts
 Disallow: /js
+Disallow: /directions.pdf
+Disallow: /contactus.html
+Disallow: /factoryshop.html
+Disallow: /design.html
+Disallow: /development.html
+Disallow: /termsofuse.html
+Disallow: /operations.html
+Disallow: /production.html
+Disallow: /email.html
+Disallow: /packaging.html
 
 Sitemap: http://www.contractcandles.com/sitemap.xml

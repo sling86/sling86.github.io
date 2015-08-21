@@ -3,6 +3,11 @@
 * {
     margin: 0;
     padding: 0;
+        -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 html {
     font-family: 'Poly', serif;
@@ -16,7 +21,7 @@ html {
 }
 
 #page-wrap {
-    width: 80%;
+    width: 20%;
     max-width: 600px;
     margin: 12% auto;
     padding: 20px;
