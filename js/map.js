@@ -108,7 +108,7 @@ function showGoogleMaps() {
     directionsDisplay.setPanel(document.getElementById('directions-wording'));
 
     var contentString = '<div id="location-panel">' +
-        '<h1 id="firstHeading" class="firstHeading cinzel">Contract <span class="yel">Candles</span> Ltd</h1>' +
+        '<h1 id="firstHeading" class="firstHeading cinzel">Contract <span class="gold">Candles</span> Ltd</h1>' +
         '<p>Lower Lodge, Vann Road,</p>' +
         '<p>Fernhurst,</p>' +
         '<p>Haslemere,</p>' +
