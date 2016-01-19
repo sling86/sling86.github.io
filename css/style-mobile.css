@@ -167,6 +167,9 @@ section {
     font-size: 1.5em;
     display: none;
 }
+.big-logo {
+    display: none;
+}
 .bar {
     padding: 1em;
 }
