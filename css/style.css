@@ -987,7 +987,8 @@ body.touch .poptrox-popup .closer {
     position: absolute;
 }
 header .emblem {
-    height: 7em;
+    height: 1.3em;
+    vertical-align: bottom;
 }
 .big-logo {
     /* text-shadow: 1px 1px 1px #000; */
