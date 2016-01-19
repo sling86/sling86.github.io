@@ -114,7 +114,7 @@ function showGoogleMaps() {
         '<p>Haslemere,</p>' +
         '<p>Surrey,</p>' +
         '<p>GU27 3NH</p>' +
-        '<p><a href="tel:+441428 645433">01428 645433</a></p>' +
+        '<p><a href="tel:+441428645433">01428 645433</a></p>' +
         '</div>';
 
     var infowindow = new google.maps.InfoWindow({
