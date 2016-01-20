@@ -131,6 +131,11 @@
                         $all.fadeTo(0, 1);
                     });
             }, settings.fadeInSpeed);
+
+            var d = new Date();
+            var y = d.getFullYear();
+            $('#copy-year').html(y); //Make sure copyright is current year!
+
         });
 
         // Forms (IE<10).
@@ -611,8 +616,5 @@
 //              $('a[href='+anchor+']').scrollTop(0);
           }   
     }
-    
-    
-    
 
 })(jQuery);
