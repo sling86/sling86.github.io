@@ -1033,7 +1033,7 @@ a.fullwidth {
     background-position: center 60%, 0 30%;
     background-repeat: no-repeat, repeat-x;
     background-size: 3%, auto;
-    text-indent: -3000px;
+    text-indent: -6000px;
     direction: ltr;
     transition: all 0.2s ease-in-out;
     opacity: 0.5;
