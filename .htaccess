@@ -1,3 +1,6 @@
 redirect 301 /subscribe.html http://www.lowerlodgecandles.com/collections
 redirect 301 /fskmi.html http://www.lowerlodgecandles.com/collections
 redirect 301 /juniperhill.html http://www.lowerlodgecandles.com/juniper-hill
+redirect 301 /browserconfig.xml /icons/browserconfig.xml
+redirect 301 /favicon.ico /icons/favicon.ico
+redirect 301 /mainfest.json /icons/manifest.json

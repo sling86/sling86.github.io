@@ -727,6 +727,20 @@ body {
 #gallery .row.images.inactive .image.from-bottom {
     top: 7em;
 }
+
+/*********************************************************************************/
+
+/* Jobs                                                                           */
+
+/*********************************************************************************/
+
+#jobs {
+    background: url('../images/bg/jobs-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
 /*********************************************************************************/
 
 /* Contact                                                                       */
